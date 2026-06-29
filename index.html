@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Yilin Zheng's living atlas of spatial systems, computational tools, prototypes, and field notes.">
+  <meta name="author" content="Yilin Zheng">
+  <meta name="copyright" content="Copyright © 2026 Yilin Zheng. All rights reserved.">
+  <meta name="rights" content="All original text, images, video, code, diagrams, and project documentation are protected by copyright unless otherwise credited.">
+  <title>Yilin Zheng — Living Atlas</title>
+  <link rel="stylesheet" href="vendor/flip.js/flip-v1.1.0.css?v=1">
+  <link rel="stylesheet" href="style.css?v=7">
+</head>
+<body>
+  <header class="site-header">
+    <a class="identity" href="#cover" aria-label="Go to atlas cover">
+      <strong>Yilin Zheng</strong>
+      <span>Living Atlas / v0.1</span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav class="site-nav" id="site-nav" aria-label="Atlas sections">
+      <a href="#index">Index</a>
+      <a href="#systems">Systems</a>
+      <a href="#field-notes">Field Notes</a>
+      <a href="#prototypes">Prototypes</a>
+      <a href="#archive">Archive</a>
+      <a href="#emerging-systems">Emerging Systems</a>
+      <a href="#about">About / Practice</a>
+    </nav>
+    <div class="header-meta" aria-hidden="true">
+      <span>34.0522° N</span>
+      <span>118.2437° W</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="page cover-page" data-page="cover" aria-labelledby="cover-title">
+      <div class="cover-index">ATLAS<br>001—∞</div>
+      <div class="cover-copy">
+        <p class="kicker">A practice in formation</p>
+        <h1 id="cover-title">An atlas of systems, prototypes, and field notes.</h1>
+        <p class="lede">A record of work moving between spatial design, computation, environmental intelligence, robotics, and emerging forms of practice.</p>
+        <div class="tag-list" aria-label="Areas of practice">
+          <span>Spatial systems</span><span>Computation</span><span>Robotics</span>
+          <span>Climate</span><span>Tools</span><span>Interfaces</span>
+        </div>
+        <a class="text-link" href="#index">Open the atlas <span>→</span></a>
+      </div>
+      <div class="cover-footer">
+        <span>Los Angeles, CA</span>
+        <span>Updated 06.2026</span>
+        <span>Scroll / select / flip</span>
+      </div>
+    </section>
+
+    <section class="page index-page" data-page="index" aria-labelledby="index-title" hidden>
+      <div class="index-intro">
+        <h1 id="index-title">YILIN ZHENG</h1>
+        <p>Design computation work across spatial systems, resilient environments, data visualization, simulation, and digital tool development.</p>
+      </div>
+      <div class="index-workspace">
+        <div class="index-table" id="master-index"></div>
+        <figure class="index-preview" id="index-preview" aria-live="polite">
+          <div class="index-preview-media" id="index-preview-media"></div>
+          <figcaption>
+            <span id="index-preview-number">01 / 10</span>
+            <strong id="index-preview-title">Impact of Climate-Responsive Shading</strong>
+            <small id="index-preview-meta">Research / 2025</small>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="page collection-page" data-page="systems" aria-labelledby="systems-title" hidden>
+      <div class="page-heading">
+        <p class="kicker">02 / Frameworks + workflows</p>
+        <h1 id="systems-title">Systems</h1>
+        <p>Operational structures that connect inputs, decisions, feedback, and spatial outcomes.</p>
+      </div>
+      <div class="collection-grid" data-collection="systems"></div>
+    </section>
+
+    <section class="page collection-page notes-page" data-page="field-notes" aria-labelledby="notes-title" hidden>
+      <div class="page-heading">
+        <p class="kicker">03 / Observations + questions</p>
+        <h1 id="notes-title">Field Notes</h1>
+        <p>An informal log of references, site observations, technical discoveries, and unresolved questions.</p>
+      </div>
+      <div class="notes-list" data-collection="field-notes"></div>
+    </section>
+
+    <section class="page collection-page" data-page="prototypes" aria-labelledby="prototypes-title" hidden>
+      <div class="page-heading">
+        <p class="kicker">04 / Tests + instruments</p>
+        <h1 id="prototypes-title">Prototypes</h1>
+        <p>Working models and proof-of-concept tools. Each one asks a specific question by making it testable.</p>
+      </div>
+      <div class="collection-grid" data-collection="prototypes"></div>
+    </section>
+
+    <section class="page collection-page" data-page="archive" aria-labelledby="archive-title" hidden>
+      <div class="page-heading">
+        <p class="kicker">05 / Prior work + source material</p>
+        <h1 id="archive-title">Archive</h1>
+        <p>Older studies, architectural work, visual research, and supporting artifacts.</p>
+      </div>
+      <div class="collection-grid" data-collection="archive"></div>
+    </section>
+
+    <section class="page collection-page" data-page="emerging-systems" aria-labelledby="emerging-title" hidden>
+      <div class="page-heading">
+        <p class="kicker">06 / Open trajectories</p>
+        <h1 id="emerging-title">Emerging Systems</h1>
+        <p>Early-stage inquiries into spatial intelligence, adaptive environments, and human-machine collaboration.</p>
+      </div>
+      <div class="collection-grid" data-collection="emerging-systems"></div>
+    </section>
+
+    <section class="page about-page" data-page="about" aria-labelledby="about-title" hidden>
+      <div class="page-heading">
+        <p class="kicker">07 / Position + method</p>
+        <h1 id="about-title">About / Practice</h1>
+      </div>
+      <div class="about-grid">
+        <div class="practice-statement">
+          <p>I am a computational designer, architectural designer, and researcher based in Los Angeles.</p>
+          <p>My work focuses on design computation: systems thinking, environmental analysis, resilient design, parametric and algorithmic workflows, performance simulation, machine-learning applications, data visualization, and digital tool development.</p>
+          <p>I use these methods to challenge how we interact with physical spaces and how we understand constructed and natural environments as systems.</p>
+        </div>
+        <dl class="practice-list">
+          <div><dt>Current role</dt><dd>Computational Designer, HKS Architects / LINE</dd></div>
+          <div><dt>Additional roles</dt><dd>Co-Founder, Spatial Intelligence Association<br>Associate II – Mapping and Data, Columbia University<br>Undergraduate Researcher, LSU School of Architecture</dd></div>
+          <div><dt>Education</dt><dd>M.S. Computational Design Practice, Columbia GSAPP, 2025<br>B.Arch., Louisiana State University School of Architecture</dd></div>
+          <div><dt>Selected recognition</dt><dd>METROPOLIS Future100 Honoree, 2024<br>ARCC King Medal for Excellence in Architectural + Environmental Design Research, 2024<br>StartupUNO First Place, 2025</dd></div>
+          <div><dt>Presentations</dt><dd>Facades+; ACSA 113: REPAIR; Stanford Research Conference; NCUR; LSU Discover Day</dd></div>
+          <div><dt>Based in</dt><dd>Los Angeles, California</dd></div>
+          <div><dt>Contact</dt><dd><a href="mailto:yz4901@columbia.edu">yz4901@columbia.edu</a><br><a href="https://www.linkedin.com/in/yilin-zheng-08b151226/" target="_blank" rel="noopener noreferrer">LinkedIn</a> / <a href="https://github.com/yilinzheng10" target="_blank" rel="noopener noreferrer">GitHub</a></dd></div>
+        </dl>
+      </div>
+      <div class="about-footer">
+        <p>This site is a working index. Entries will change as projects, methods, and questions evolve.</p>
+        <span>© 2026 Yilin Zheng / All rights reserved</span>
+      </div>
+    </section>
+  </main>
+
+  <aside class="reader" id="reader" aria-hidden="true" aria-label="Project reader">
+    <div class="reader-backdrop" data-close-reader></div>
+    <div class="reader-page">
+      <header class="reader-header">
+        <span id="reader-count">Entry 01 / 10</span>
+        <button type="button" data-close-reader>Close ×</button>
+      </header>
+      <div class="flip-book work-book" id="work-book" aria-live="polite"></div>
+      <footer class="reader-controls">
+        <button type="button" id="previous-work"><span>←</span> Previous</button>
+        <span class="reader-rights">© Yilin Zheng / All rights reserved</span>
+        <button type="button" id="next-work">Next <span>→</span></button>
+      </footer>
+    </div>
+  </aside>
+
+  <script src="vendor/flip.js/flip-v1.1.0.js?v=2"></script>
+  <script src="swipeHandling.js?v=7"></script>
+</body>
+</html>
