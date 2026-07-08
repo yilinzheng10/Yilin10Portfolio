@@ -1,0 +1,175 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "portfolio-content.schema.json",
+  "title": "Portfolio Content",
+  "description": "Schemas for portfolio updates that move from captured notes to public content.",
+  "$defs": {
+    "status": {
+      "type": "string",
+      "enum": ["captured", "staged", "published", "archived"]
+    },
+    "visibility": {
+      "type": "string",
+      "enum": ["private", "draft", "public"]
+    },
+    "link": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["label", "url"],
+      "properties": {
+        "label": { "type": "string" },
+        "url": { "type": "string" },
+        "type": { "type": ["string", "null"] }
+      }
+    },
+    "media": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["label", "path"],
+      "properties": {
+        "label": { "type": "string" },
+        "path": { "type": "string" },
+        "type": { "type": ["string", "null"] },
+        "alt": { "type": ["string", "null"] },
+        "credit": { "type": ["string", "null"] }
+      }
+    },
+    "baseItem": {
+      "type": "object",
+      "required": ["id", "title", "type", "status", "visibility"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+        "title": { "type": "string" },
+        "date": { "type": ["string", "null"], "pattern": "^\\d{4}(-\\d{2})?(-\\d{2})?$" },
+        "displayDate": { "type": ["string", "null"] },
+        "type": {
+          "type": "string",
+          "enum": ["news", "activity", "project", "experiment", "field-note", "affiliation", "award", "publication", "talk", "media"]
+        },
+        "status": { "$ref": "#/$defs/status" },
+        "visibility": { "$ref": "#/$defs/visibility" },
+        "summary": { "type": ["string", "null"] },
+        "description": { "type": ["string", "null"] },
+        "tags": { "type": "array", "items": { "type": "string" } },
+        "relatedProjects": { "type": "array", "items": { "type": "string" } },
+        "links": { "type": "array", "items": { "$ref": "#/$defs/link" } },
+        "media": { "type": "array", "items": { "$ref": "#/$defs/media" } },
+        "location": { "type": ["string", "null"] },
+        "organization": { "type": ["string", "null"] },
+        "role": { "type": ["string", "null"] },
+        "collaborators": { "type": "array", "items": { "type": "string" } },
+        "source": { "type": ["string", "null"] },
+        "priority": { "type": ["integer", "null"], "minimum": 0, "maximum": 10 },
+        "featured": { "type": "boolean" },
+        "lastUpdated": { "type": ["string", "null"], "pattern": "^\\d{4}-\\d{2}-\\d{2}$" }
+      }
+    },
+    "news": {
+      "unevaluatedProperties": false,
+      "allOf": [
+        { "$ref": "#/$defs/baseItem" },
+        { "properties": { "type": { "const": "news" } } }
+      ]
+    },
+    "activity": {
+      "unevaluatedProperties": false,
+      "allOf": [
+        { "$ref": "#/$defs/baseItem" },
+        { "properties": { "type": { "const": "activity" } } }
+      ]
+    },
+    "project": {
+      "unevaluatedProperties": false,
+      "allOf": [
+        { "$ref": "#/$defs/baseItem" },
+        {
+          "properties": {
+            "type": { "const": "project" },
+            "problem": { "type": ["string", "null"] },
+            "method": { "type": ["string", "null"] },
+            "tools": { "type": "array", "items": { "type": "string" } },
+            "outcome": { "type": ["string", "null"] },
+            "currentState": { "type": ["string", "null"] }
+          }
+        }
+      ]
+    },
+    "experiment": {
+      "unevaluatedProperties": false,
+      "allOf": [
+        { "$ref": "#/$defs/baseItem" },
+        {
+          "properties": {
+            "type": { "const": "experiment" },
+            "question": { "type": ["string", "null"] },
+            "method": { "type": ["string", "null"] },
+            "tools": { "type": "array", "items": { "type": "string" } },
+            "result": { "type": ["string", "null"] }
+          }
+        }
+      ]
+    },
+    "fieldNote": {
+      "unevaluatedProperties": false,
+      "allOf": [
+        { "$ref": "#/$defs/baseItem" },
+        {
+          "properties": {
+            "type": { "const": "field-note" },
+            "observation": { "type": ["string", "null"] },
+            "question": { "type": ["string", "null"] }
+          }
+        }
+      ]
+    },
+    "affiliation": {
+      "unevaluatedProperties": false,
+      "allOf": [
+        { "$ref": "#/$defs/baseItem" },
+        { "properties": { "type": { "const": "affiliation" } } }
+      ]
+    },
+    "award": {
+      "unevaluatedProperties": false,
+      "allOf": [
+        { "$ref": "#/$defs/baseItem" },
+        { "properties": { "type": { "const": "award" } } }
+      ]
+    },
+    "publication": {
+      "unevaluatedProperties": false,
+      "allOf": [
+        { "$ref": "#/$defs/baseItem" },
+        {
+          "properties": {
+            "type": { "const": "publication" },
+            "publicationStatus": { "type": ["string", "null"] },
+            "venue": { "type": ["string", "null"] },
+            "citation": { "type": ["string", "null"] }
+          }
+        }
+      ]
+    },
+    "talk": {
+      "unevaluatedProperties": false,
+      "allOf": [
+        { "$ref": "#/$defs/baseItem" },
+        {
+          "properties": {
+            "type": { "const": "talk" },
+            "topics": { "type": "array", "items": { "type": "string" } }
+          }
+        }
+      ]
+    },
+    "mediaItem": {
+      "unevaluatedProperties": false,
+      "allOf": [
+        { "$ref": "#/$defs/baseItem" },
+        { "properties": { "type": { "const": "media" } } }
+      ]
+    }
+  },
+  "type": "array",
+  "items": { "$ref": "#/$defs/baseItem" }
+}
