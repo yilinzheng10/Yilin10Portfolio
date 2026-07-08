@@ -121,18 +121,26 @@ main { min-height: 100vh; padding-top: var(--header); }
 .note-row h2 { margin: 0; font-size: clamp(24px, 3.2vw, 50px); font-weight: 400; letter-spacing: -.055em; line-height: 1; }
 .note-row p { max-width: 470px; margin: 0; font-family: Georgia, serif; line-height: 1.45; }
 
-.about-grid { display: grid; grid-template-columns: 1.3fr .7fr; gap: 8vw; padding: 64px var(--pad) 100px; }
-.practice-statement { max-width: 850px; }
-.practice-statement p { margin: 0 0 24px; font-family: Georgia, serif; font-size: clamp(20px, 2.35vw, 36px); line-height: 1.22; letter-spacing: -.02em; }
+.about-grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: 8vw; padding: 64px var(--pad) 100px; }
+.practice-statement { max-width: 760px; }
+.practice-statement p { margin: 0 0 20px; font-family: Georgia, serif; font-size: clamp(18px, 1.85vw, 29px); line-height: 1.28; letter-spacing: -.018em; }
+.practice-statement p:first-child { width: fit-content; margin-bottom: 34px; padding-bottom: 8px; border-bottom: 1px solid var(--accent); font-family: Arial, sans-serif; font-size: clamp(22px, 2.35vw, 35px); font-weight: 600; line-height: 1.12; }
+.practice-statement p:nth-child(2) { font-size: clamp(20px, 2.05vw, 32px); }
+.practice-statement p:nth-child(3) { max-width: 680px; color: var(--muted); font-size: clamp(16px, 1.45vw, 23px); line-height: 1.38; }
 .practice-list { margin: 0; border-top: 1px solid var(--ink); }
-.practice-list div { padding: 18px 0 26px; border-bottom: 1px solid var(--line); }
+.practice-list div { padding: 16px 0 22px; border-bottom: 1px solid var(--line); }
 .practice-list dt { margin-bottom: 12px; color: var(--muted); font-family: "Courier New", monospace; font-size: 10px; text-transform: uppercase; }
-.practice-list dd { margin: 0; font-size: 13px; line-height: 1.6; }
+.practice-list dd { margin: 0; font-size: 13px; line-height: 1.42; }
 .practice-list dd span,
-.practice-list dd a { display: block; margin-bottom: 5px; }
+.practice-list dd a { display: block; margin-bottom: 7px; }
 .practice-list a { color: var(--ink); text-decoration: none; text-underline-offset: 3px; }
 .practice-list a:hover,
 .practice-list a:focus-visible { color: var(--accent); text-decoration: underline; }
+.contact-block dd { line-height: 1.35; }
+.contact-prompt { max-width: 260px; margin: 0 0 14px; font-family: Georgia, serif; font-size: 15px; line-height: 1.25; }
+.contact-links { display: flex; align-items: flex-start; gap: 12px; }
+.contact-logo { display: inline-grid; flex: 0 0 30px; width: 30px; height: 30px; place-items: center; border: 1px solid var(--accent); color: var(--accent); font-family: Arial, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: -.02em; }
+.contact-links a { margin-bottom: 4px; }
 .about-footer { display: flex; justify-content: space-between; align-items: end; gap: 30px; padding: 24px var(--pad); }
 .about-footer p { max-width: 470px; margin: 0; font-size: 12px; line-height: 1.4; }
 .about-footer span { color: var(--muted); font-family: "Courier New", monospace; font-size: 10px; text-transform: uppercase; }
@@ -171,6 +179,14 @@ main { min-height: 100vh; padding-top: var(--header); }
 .key-frame .visual-frame { display: grid; place-items: center; min-height: 0; }
 .key-frame img, .key-frame video { width: 100%; height: auto; max-height: 72vh; object-fit: contain; background: white; }
 .key-frame.is-mirrored img { transform: scaleX(-1); }
+.key-frame.is-uniform { grid-column: 1 / -1; }
+.key-frame.is-uniform .visual-frame { aspect-ratio: 16 / 7; }
+.key-frame.is-uniform img,
+.key-frame.is-uniform video,
+.key-frame.is-uniform iframe { width: 100%; height: 100%; max-height: none; min-height: 0; object-fit: cover; }
+.key-frame.is-uniform.is-contain img,
+.key-frame.is-uniform.is-contain video,
+.key-frame.is-uniform.is-contain iframe { object-fit: contain; }
 .key-frame-primary img, .key-frame-primary video { max-height: 78vh; }
 .key-frame iframe { width: 100%; min-height: 68vh; border: 0; background: white; }
 .project-description { display: grid; grid-template-columns: minmax(220px, .55fr) minmax(300px, 1fr); gap: clamp(24px, 5vw, 86px); margin: 0 0 clamp(44px, 6vw, 86px); }

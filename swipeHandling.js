@@ -87,7 +87,7 @@ const works = [
     coordinates: "HKS MADE / robotic workflow",
     media: ["Repository", "System architecture", "Control interfaces"],
     indexGroup: "Prototypes",
-    image: "assets/project/reference/gray-placeholder.svg",
+    image: "assets/project/reference/standard-bots-repo.png",
     role: "Computational workflow researcher",
     audience: "Robotic fabrication, computational design, design-engineering workflows",
     source: "GitHub repository: yilinzheng10/HKS_MADE_StandardBotsRO1",
@@ -97,12 +97,12 @@ const works = [
       ["Standard Bots", "https://standardbots.com/"]
     ],
     evidence: [
-      { type: "media", kind: "NEEDED", label: "Robotics workflow image needed", path: "assets/project/reference/gray-placeholder.svg", caption: "Add a robot setup photo, Grasshopper-to-ROS diagram, or Standard Bots control screenshot." },
+      { type: "media", kind: "REPO", label: "Standard Bots repository screenshot", path: "assets/project/reference/standard-bots-repo.png", caption: "" },
       { type: "link", kind: "CODE", label: "Open GitHub repository", url: "https://github.com/yilinzheng10/HKS_MADE_StandardBotsRO1", caption: "ROS2 realtime API and Standard Bots RO1 documentation repository." }
     ],
     summary: "A computational-to-robotic workflow connecting design geometry, inverse kinematics, ROS2, and Standard Bots control interfaces.",
     description: [
-      "The repository connects Rhino and Grasshopper geometry with Python, ROS2, StandardOS, and REST API control for the Standard Bots RO1 arm."
+      "The <a href=\"https://github.com/yilinzheng10/HKS_MADE_StandardBotsRO1\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub repository</a> connects Rhino and Grasshopper geometry with Python, ROS2, StandardOS, and REST API control for the Standard Bots RO1 arm."
     ],
     note: "The work treats robotic control as an interoperable design system: geometry, code, and hardware have to remain legible to each other.",
     links: [["Open repository", "https://github.com/yilinzheng10/HKS_MADE_StandardBotsRO1"]]
@@ -114,12 +114,15 @@ const works = [
     type: "Architecture",
     sections: ["architecture"],
     status: "Studio",
+    sortPriority: 12,
     tags: ["headquarters", "urban site", "Baton Rouge"],
     tools: "Rhinoceros, Grasshopper, CoveTool, Google Earth Pro, Adobe Suite, Procreate",
     coordinates: "Downtown Baton Rouge, LA / Mississippi River",
     media: ["PDF section", "Site analysis", "Vicinity diagrams", "Access studies"],
     indexGroup: "Architectural Design and System",
-    image: "assets/project/architecture/dtbr-preview.png",
+    image: "assets/project/architecture/pages/dtbr-4.png",
+    uniformFrames: true,
+    uniformFit: "contain",
     role: "Architectural designer",
     audience: "Architecture portfolio review, urban and environmental design systems",
     source: "260704_ARCH_DTBR.pdf",
@@ -149,12 +152,15 @@ const works = [
     type: "Architecture",
     sections: ["architecture"],
     status: "Studio",
+    sortPriority: 13,
     tags: ["coastal site", "marine ecology", "Miami"],
     tools: "Rhinoceros, ClimateStudio, ArcGIS, Lumion, Google Earth Pro, Adobe Suite",
     coordinates: "Miami, FL / coastal harborfront",
     media: ["PDF section", "Coastal analysis", "Climate risk", "Public realm"],
     indexGroup: "Architectural Design and System",
-    image: "assets/project/architecture/harborfront-preview.png",
+    image: "assets/project/architecture/stadium-collage.png",
+    uniformFrames: true,
+    uniformFit: "contain",
     role: "Architectural designer",
     audience: "Architecture portfolio review, coastal systems, public-space design",
     source: "260704_ARCH_MIAMI.pdf",
@@ -183,12 +189,15 @@ const works = [
     type: "Architecture",
     sections: ["architecture"],
     status: "Built research",
+    sortPriority: 11,
     tags: ["green wall", "fabrication", "environmental systems"],
     tools: "Rhino, Grasshopper, CNC routing, Clayton, 3D Potter, Climate Consultant, Adobe Suite",
     coordinates: "LSU Hill Farm / Baton Rouge, LA",
     media: ["PDF section", "Fabrication process", "Wall-system research"],
     indexGroup: "Architectural Design and System",
     image: "assets/project/architecture/green-wall-preview.png",
+    uniformFrames: true,
+    uniformFit: "contain",
     role: "Research, design, coordination, and fabrication",
     audience: "Fabrication research, environmental systems, architecture portfolio review",
     source: "260704_ARCH_GREENWALL.pdf",
@@ -217,12 +226,15 @@ const works = [
     type: "Architecture",
     sections: ["architecture"],
     status: "Studio",
+    sortPriority: 14,
     tags: ["spatial exploration"],
     tools: "Architectural drawing, model documentation",
     coordinates: "Architecture studio / sequence study",
     media: ["PDF section", "Line drawings", "Spatial sequence"],
     indexGroup: "Architectural Design and System",
-    image: "assets/project/architecture/continual-delay-preview.png",
+    image: "assets/project/architecture/pages/continual-selected-3.png",
+    uniformFrames: true,
+    uniformFit: "contain",
     role: "Architectural designer",
     audience: "Architecture portfolio review, spatial sequence, conceptual design systems",
     source: "260704_ARCH1_ Continual Delay -Yilin Zheng.pdf",
@@ -241,6 +253,35 @@ const works = [
       "Continual Delay explores spatial sequence, pause, and perception through architectural drawing and model-based documentation."
     ],
     note: "Delay becomes a spatial condition: movement is staged through thresholds, intervals, and changing visual access."
+  },
+  {
+    id: "form-exploration-2020",
+    title: "Form Exploration",
+    year: "2020",
+    type: "Architecture",
+    sections: ["architecture"],
+    status: "Study",
+    sortPriority: 15,
+    tags: ["form study", "spatial exploration", "model"],
+    tools: "Physical model, spatial composition",
+    coordinates: "Early form study / cubic space model",
+    media: ["Model image", "Form study"],
+    indexGroup: "Architectural Design and System",
+    image: "assets/project/architecture/form-exploration-2020.png",
+    uniformFrames: true,
+    uniformFit: "contain",
+    role: "Designer",
+    audience: "Early architectural form studies, spatial composition, model-based exploration",
+    source: "cubic space model.png",
+    sourceNote: "User-provided image from the architecture portfolio archive.",
+    evidence: [
+      { type: "media", kind: "MODEL", label: "Cubic space model", path: "assets/project/architecture/form-exploration-2020.png", caption: "" }
+    ],
+    summary: "An early spatial composition study using cubic massing, shadow, and interior voids to test form and perception.",
+    description: [
+      "Form Exploration is an early architecture study from 2020 using cubic space, shadow, and layered openings to test how mass and void can shape perception.",
+      "The image reads as a model-based investigation: form is treated less as an object and more as a sequence of spatial frames, thresholds, and projected depth."
+    ]
   },
   {
     id: "bento",
@@ -269,8 +310,12 @@ const works = [
       { type: "link", kind: "ARTICLE", label: "Project article", url: "https://medium.com/design-intelligence-course/bento-an-application-for-the-retail-store-of-the-next-generation-2d2251144d83", caption: "Original article linked from the source portfolio." },
       { type: "link", kind: "CODE", label: "Web UI repository", url: "https://github.com/yilinzheng10/web-gh", caption: "Repository for the Rhino.Compute web interface." }
     ],
-    summary: "A platform using data-driven location insights for spatial management in small retail stores.",
-    note: "The web interface responds simultaneously to a Grasshopper and Rhino model through Rhino.Compute.",
+    summary: "A platform using data-driven location insights for spatial and SKU management in small retail stores.",
+    description: [
+      "BENTO is a platform using data-driven location insights for spatial and SKU management in small retail stores. The <a href=\"https://medium.com/design-intelligence-course/bento-an-application-for-the-retail-store-of-the-next-generation-2d2251144d83\" target=\"_blank\" rel=\"noopener noreferrer\">project article</a> frames it as an application for next-generation retail operations.",
+      "The prototype connects store layout, customer movement, and operational decisions through a web interface linked to a parametric spatial model."
+    ],
+    note: "Prototyped through Figma, the web interface responds simultaneously to a Grasshopper and Rhino model through Rhino.Compute.",
     links: [
       ["Project article", "https://medium.com/design-intelligence-course/bento-an-application-for-the-retail-store-of-the-next-generation-2d2251144d83"],
       ["Web UI repository", "https://github.com/yilinzheng10/web-gh"]
@@ -300,9 +345,8 @@ const works = [
     ],
     summary: "EmotiSync is an archived TypeScript web prototype exploring interface behavior and affective synchronization.",
     description: [
-      "EmotiSync records a working web prototype and the decisions embedded in its interface structure."
+      "EmotiSync is a web-based interface for emotional and wellness valuation, using a personal calendar and user feedback loop to help people navigate demanding and stressful work days. Developed with Catherine Ye and Yuxi Dai."
     ],
-    note: "The archive keeps an earlier interface experiment visible as a trace of process and tooling.",
     links: [
       ["Open repository", "https://github.com/yilinzheng10/emotisync2026"],
       ["Open live archive", "https://emotisync2026.vercel.app"]
@@ -315,12 +359,15 @@ const works = [
     type: "System",
     sections: ["architecture"],
     status: "Designed",
+    sortPriority: 10,
     tags: ["BIM", "mixed-use", "climate-responsive envelope"],
     tools: "Rhino, Grasshopper, Revit, ClimateStudio, Lumion, Adobe Suite",
     coordinates: "New York, NY / NOMAD",
     media: ["BIM model", "Climate analysis", "Drawings", "Renderings"],
     indexGroup: "Architectural Design and System",
     image: "assets/project/BIM/overview1.png",
+    uniformFrames: true,
+    uniformFit: "contain",
     secondary: [
       "assets/project/BIM/BIM-climateanalysis.jpg",
       "assets/project/BIM/facade_gh.png",
@@ -341,6 +388,10 @@ const works = [
       { type: "media", kind: "AXON", label: "Revit axonometric", path: "assets/project/BIM/revit_axon1.png", caption: "Coordinated model view from the BIM workflow." }
     ],
     summary: "A mixed-use high-rise integrating flexible offices, retail, and a boutique hotel within a climate-responsive envelope.",
+    description: [
+      "Terracurve Tower is a mixed-use high-rise that reimagines urban living and working in Manhattan's NOMAD district. The design responds to post-pandemic needs by integrating flexible office spaces, active retail, and a boutique hotel within a climate-responsive envelope.",
+      "The tower draws from New York's skyline and organic formal systems to shape a facade that maximizes daylight, expands views, and gives the building a distinct urban identity. Program stacking organizes retail, garden, office, hotel, residential, and MEP zones vertically so building systems, user experience, and circulation remain coordinated."
+    ],
     note: "Role: Designer and BIM Specialist. Team: Yilin Zheng, Manas Bhatia, Yuxi Dai."
   },
   {
@@ -357,6 +408,7 @@ const works = [
     media: ["Live tool", "Demo video", "User journey", "Interface"],
     indexGroup: "Spatial Systems & Research",
     image: "assets/0402.mp4",
+    uniformFrames: true,
     secondary: ["assets/gh_visualization.mp4"],
     embedFrames: [
       { kind: "WEB", label: "Environmental risk story map", path: "https://yilinzheng10.github.io/MAPBOX-Storytelling/" }
@@ -365,9 +417,7 @@ const works = [
     audience: "Home buyers, flood-risk resource navigation, public-facing climate tools",
     source: "YilinZhengDesign Works / FloodRisk prototype",
     sourceNote: "Reference content consolidated from the original flood-risk prototype and user-flow entries.",
-    organizations: [
-      ["Columbia GSAPP", "https://www.arch.columbia.edu/"]
-    ],
+    organizations: [],
     evidence: [
       { type: "media", kind: "DEMO", label: "Prototype demo", path: "assets/0402.mp4", caption: "Video capture of the flood-risk resource tool." },
       { type: "link", kind: "LIVE", label: "Open prototype", url: "https://yilinzheng10.github.io/FloodRisk/", caption: "Live prototype linked from the original portfolio." },
@@ -379,7 +429,7 @@ const works = [
       "Where the Water Reached brings together population distribution, housing gentrification, home pricing, and flood-risk research and turns geographic evidence into a public-facing decision support prototype.",
       "The project studies information gaps in housing and climate-risk communication, then tests how mapping, user-flow research, and interactive resources can make long-term risk easier to understand, and understanding what nudges the long-term financial decision making for individual investment such as housing."
     ],
-    note: "This is a master's thesis at Columbia GSAPP.",
+    note: "This is a master's thesis at <a href=\"https://www.arch.columbia.edu/\" target=\"_blank\" rel=\"noopener noreferrer\">Columbia GSAPP</a>.",
     links: [
       ["Open prototype", "https://yilinzheng10.github.io/FloodRisk/"],
       ["User mapping", "https://embed.figma.com/board/GQ3y8G3sUmI5mdqXefN0AB/User-Mapping?node-id=0-1&embed-host=share"],
@@ -398,22 +448,21 @@ const works = [
     coordinates: "Dallas Downtown Masterplan / public-space reviews",
     media: ["Repository", "README", "Data-method placeholder"],
     indexGroup: "Prototypes",
-    image: "assets/project/reference/gray-placeholder.svg",
+    image: "assets/project/reference/review-scraper-repo.png",
     role: "Data-method researcher",
     audience: "Urban research, public-space analysis, data collection methods",
     source: "GitHub repository: yilinzheng10/scraping-reviews-from-googlemaps",
     sourceNote: "Repository README describes user sentiment analysis of public spaces based on Google Maps reviews for a Dallas Downtown Masterplan design proposal.",
     evidence: [
-      { type: "media", kind: "NEEDED", label: "Review scraper image needed", path: "assets/project/reference/gray-placeholder.svg", caption: "Add a data-flow diagram, notebook output, or sentiment-analysis map." },
+      { type: "media", kind: "REPO", label: "Review scraper repository screenshot", path: "assets/project/reference/review-scraper-repo.png", caption: "" },
       { type: "link", kind: "CODE", label: "Open GitHub repository", url: "https://github.com/yilinzheng10/scraping-reviews-from-googlemaps", caption: "Repository for scraping Google Maps reviews and ratings." },
       { type: "link", kind: "README", label: "README editing page", url: "https://github.com/yilinzheng10/scraping-reviews-from-googlemaps/new/main?filename=README.md", caption: "User-provided README page reference for this repository." }
     ],
     summary: "A data-collection method for reading public-space experience through Google Maps reviews, ratings, and sentiment signals.",
     description: [
       "This repository supports a Dallas Downtown Masterplan design proposal by treating online reviews as a source of public-space evidence.",
-      "The scraper collects review and rating data so qualitative urban experience can be compared with spatial decisions, site priorities, and public perception."
+      "The <a href=\"https://github.com/yilinzheng10/scraping-reviews-from-googlemaps\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub repository</a> and <a href=\"https://github.com/yilinzheng10/scraping-reviews-from-googlemaps/new/main?filename=README.md\" target=\"_blank\" rel=\"noopener noreferrer\">README page</a> document how the scraper collects review and rating data so qualitative urban experience can be compared with spatial decisions, site priorities, and public perception."
     ],
-    note: "The method treats everyday reviews as spatial evidence rather than as isolated platform comments.",
     links: [
       ["Open repository", "https://github.com/yilinzheng10/scraping-reviews-from-googlemaps"],
       ["README page", "https://github.com/yilinzheng10/scraping-reviews-from-googlemaps/new/main?filename=README.md"]
@@ -431,13 +480,13 @@ const works = [
     coordinates: "NYC / public spatial research",
     media: ["Repository", "Spatial analysis notes", "Method placeholder"],
     indexGroup: "Spatial Systems & Research",
-    image: "assets/project/reference/gray-placeholder.svg",
+    image: "assets/project/reference/spatial-data-python-repo.png",
     role: "Spatial-data researcher",
     audience: "Geospatial research, design computation, public-data workflows",
     source: "GitHub repository: yilinzheng10/Working-with-Spatial-Data-in-Python",
     sourceNote: "Repository README describes NYC public spatial research and analysis exploration.",
     evidence: [
-      { type: "media", kind: "NEEDED", label: "Spatial data image needed", path: "assets/project/reference/gray-placeholder.svg", caption: "Add a notebook screenshot, map output, or geospatial workflow diagram." },
+      { type: "media", kind: "REPO", label: "Spatial data repository screenshot", path: "assets/project/reference/spatial-data-python-repo.png", caption: "" },
       { type: "link", kind: "CODE", label: "Open GitHub repository", url: "https://github.com/yilinzheng10/Working-with-Spatial-Data-in-Python", caption: "Python repository for working with public spatial data." }
     ],
     summary: "A Python-based spatial-data research repository for exploring New York City public spatial datasets as design material.",
@@ -572,7 +621,7 @@ function renderOrganizationLinks(work) {
 function renderProjectDescription(work) {
   const description = [...(work.description || [work.summary])];
   const context = renderOrganizationLinks(work);
-  if (context || work.note) description.push(`${context}${work.note || ""}`);
+  if (context || work.note) description.push(`${context}${context && work.note ? " " : ""}${work.note || ""}`);
   return `
     <div class="project-description">
       ${description.filter(Boolean).map((paragraph) => `<p>${paragraph}</p>`).join("")}
@@ -608,7 +657,7 @@ function renderKeyFrames(work) {
     : uniqueFrames;
 
   return displayFrames.map((frame, index) => `
-    <figure class="key-frame ${index === 0 ? "key-frame-primary" : ""} ${frame.mirror ? "is-mirrored" : ""}">
+    <figure class="key-frame ${index === 0 ? "key-frame-primary" : ""} ${frame.mirror ? "is-mirrored" : ""} ${work.uniformFrames ? "is-uniform" : ""} ${work.uniformFit === "contain" ? "is-contain" : ""}">
       <div class="visual-frame">
         ${frame.type === "embed" ? `<iframe src="${frame.path}" title="${frame.label}" loading="lazy"></iframe>` : renderMedia(frame.path, frame.label, "controls autoplay")}
       </div>
@@ -618,12 +667,12 @@ function renderKeyFrames(work) {
 
 function sortWorksByYear(entries) {
   return [...entries].sort((a, b) => {
-    const yearA = parseInt(a.work.year, 10) || 0;
-    const yearB = parseInt(b.work.year, 10) || 0;
-    if (yearA !== yearB) return yearB - yearA;
     const priorityA = a.work.sortPriority || 0;
     const priorityB = b.work.sortPriority || 0;
     if (priorityA !== priorityB) return priorityA - priorityB;
+    const yearA = parseInt(a.work.year, 10) || 0;
+    const yearB = parseInt(b.work.year, 10) || 0;
+    if (yearA !== yearB) return yearB - yearA;
     return a.index - b.index;
   });
 }
