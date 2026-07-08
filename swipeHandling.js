@@ -1,26 +1,35 @@
 const works = [
   {
     id: "climate-shading",
-    title: "Impact of Climate-Responsive Shading",
+    title: "Climate-Responsive Shading Simulation",
     year: "2025",
     type: "Research",
-    sections: ["systems", "emerging-systems"],
+    sections: ["systems"],
     status: "Published",
     tags: ["shading", "energy", "simulation"],
     tools: "Grasshopper, Rhino, ClimateStudio, Ladybug",
     coordinates: "ACSA 113 / REPAIR",
     media: ["Results diagram", "Peer-reviewed paper", "Simulation"],
-    indexGroup: "Research",
+    indexGroup: "Spatial Systems & Research",
     image: "assets/ACSA Results Diagram.1.jpg",
     role: "Researcher / computational design author",
     audience: "Building-envelope research, climate-responsive design, conference review",
     source: "YilinZhengDesign Works / ACSA 113 abstract book",
     sourceNote: "Reference content consolidated from the prior portfolio entry and ACSA publication links.",
+    embedFrames: [
+      { kind: "PAPER", label: "View paper", path: "https://drive.google.com/file/d/1uW5BejPOhL1PCofYlklacAtd8AUmlY5u/preview" },
+      { kind: "BOOK", label: "ACSA 113 Abstract Book", path: "https://www.acsa-arch.org/wp-content/uploads/2025/02/ACSA113-Abstract-Book-11Feb2025-WebVersion.pdf" }
+    ],
     evidence: [
       { type: "link", kind: "PAPER", label: "View paper", url: "https://drive.google.com/file/d/1uW5BejPOhL1PCofYlklacAtd8AUmlY5u/view?usp=sharing", caption: "Full research paper linked from the original portfolio." },
       { type: "link", kind: "BOOK", label: "ACSA 113 Abstract Book", url: "https://www.acsa-arch.org/wp-content/uploads/2025/02/ACSA113-Abstract-Book-11Feb2025-WebVersion.pdf", caption: "Conference context for ACSA 113th Annual Meeting: REPAIR." }
     ],
     summary: "A peer-reviewed study of how rotational axes in climate-responsive shading systems affect shade and interior energy consumption.",
+    description: [
+      "This research examines how climate-responsive shading geometry can mediate solar exposure, interior shade, and building energy demand under extreme heat conditions.",
+      "Simulation and iterative design compare shading-system rotations, sizes, offsets, through Grasshopper, Rhino, ClimateStudio, and Ladybug.",
+      "The work connects the folding facade research with the published ACSA study, using environmental simulation as a design method for testing how small changes in facade movement can produce measurable changes in performance."
+    ],
     note: "Presented through the Association of Collegiate Schools of Architecture 113th Annual Meeting: REPAIR.",
     links: [
       ["View paper", "https://drive.google.com/file/d/1uW5BejPOhL1PCofYlklacAtd8AUmlY5u/view?usp=sharing"],
@@ -28,51 +37,211 @@ const works = [
     ]
   },
   {
-    id: "scaled-model",
-    title: "Climate System / Scaled Model",
-    year: "2025",
-    type: "Prototype",
-    sections: ["prototypes", "systems"],
-    status: "Built",
-    tags: ["physical computing", "actuation", "interface"],
-    tools: "SwiftUI, ESP32 microcontroller, servo motor",
-    coordinates: "Prototype / 1:N",
-    media: ["Physical model", "Demo video", "Control interface"],
+    id: "solara",
+    title: "SOLARA",
+    year: "2026",
+    type: "Design & Engineering",
+    sections: ["prototypes"],
+    status: "Live",
+    tags: ["solar facade", "kinetic envelope", "software", "hardware"],
+    tools: "XCode, SwiftUI, Arduino IDE, Git, Grasshopper, Rhino, Fusion 360",
+    coordinates: "Building envelope / solar tracking",
+    media: ["Facade render", "Precursor prototype video", "Uploaded assets"],
     indexGroup: "Prototypes",
-    image: "assets/0318.mov",
-    role: "Prototype designer / interaction builder",
-    audience: "Physical-computing review, responsive-environment testing",
-    source: "YilinZhengDesign selected works",
-    sourceNote: "Reference content consolidated from the original scaled model demo entry.",
-    evidence: [
-      { type: "media", kind: "VIDEO", label: "Scaled model demo", path: "assets/0318.mov", caption: "Video record of the control interface driving the physical model." }
+    image: "assets/project/reference/solara-option1.png",
+    secondary: [
+      { path: "assets/project/reference/solara-panel-rotation.png", mirror: true },
+      "assets/project/reference/solara-physical-model.jpg",
+      "assets/project/reference/solara-render.png",
+      "assets/0318.mov",
+      "assets/project/reference/solara-uploaded-logo.png"
     ],
-    summary: "A scaled physical prototype connecting a SwiftUI control interface to an ESP32 microcontroller and servo-driven movement.",
-    note: "The demo documents the relationship between a digital control state and the movement of the physical model."
+    role: "System designer / product narrative",
+    audience: "Climate technology, building-envelope systems, facade strategy",
+    source: "SOLARA live website",
+    sourceNote: "Reference material from the public SOLARA website and the earlier climate-system scaled prototype.",
+    organizations: [
+      ["SOLARA", "https://websitesolara.vercel.app/"]
+    ],
+    evidence: [
+      { type: "media", kind: "RENDER", label: "SOLARA facade render", path: "assets/project/reference/solara-render.png", caption: "Facade render from the SOLARA public website." },
+      { type: "media", kind: "MODEL", label: "Precursor scaled model", path: "assets/0318.mov", caption: "" },
+      { type: "link", kind: "LIVE", label: "Open SOLARA website", url: "https://websitesolara.vercel.app/", caption: "Live project website for systematic solar facade solutions." }
+    ],
+    summary: "SOLARA explores kinetic solar facades as an active building-envelope system for energy generation, shading, and thermal comfort.",
+    description: [
+      "SOLARA is a self-sufficient energy-generating dynamic facade system. It is a software-controlled motorized machine system developed with Johny and Victoria Lopez.",
+      "The scaled climate-system model is a precursor prototype: a small digital-to-physical test for translating interface states into servo-driven motion and developing the facade idea into a larger building system."
+    ],
+    note: "The project treats the facade as an interface between climate data, building performance, and mechanical movement.",
+    links: [["Open website", "https://websitesolara.vercel.app/"]]
   },
   {
-    id: "architectural-studies",
-    title: "Comprehensive Architectural Design Studies",
-    year: "2022–2025",
-    type: "Archive",
-    sections: ["archive", "systems"],
-    status: "Selected works",
-    tags: ["BIM", "fabrication", "sustainable design"],
-    tools: "Rhino, Revit, fabrication workflows, Adobe Suite",
-    coordinates: "Architecture portfolio / 2022–2025",
-    media: ["Portfolio preview", "BIM", "Fabrication", "Iteration studies"],
-    indexGroup: "Spatial Systems",
-    image: "assets/Arch_Portfolio.png",
-    role: "Architectural designer",
-    audience: "Architecture portfolio review",
-    source: "YilinZhengDesign selected works",
-    sourceNote: "Added from the original portfolio's selected architectural studies entry.",
-    evidence: [
-      { type: "media", kind: "PREVIEW", label: "Architecture portfolio overview", path: "assets/Arch_Portfolio.png", caption: "Portfolio preview image from the original Works page." },
-      { type: "link", kind: "PORTFOLIO", label: "View portfolio PDF", url: "https://drive.google.com/file/d/1_k6umQeYP2JBixde_zEkOplPiKMWSICC/view?usp=sharing", caption: "Comprehensive architectural design studies, linked from the original portfolio." }
+    id: "standard-bots-ros2",
+    title: "Standard Bots RO1 Workflow",
+    year: "2026",
+    type: "Prototype",
+    sections: ["prototypes", "systems"],
+    status: "Repository",
+    tags: ["robotics", "ROS2", "computational fabrication"],
+    tools: "Rhino, Grasshopper, COMPAS, Python, ROS2, StandardOS REST API",
+    coordinates: "HKS MADE / robotic workflow",
+    media: ["Repository", "System architecture", "Control interfaces"],
+    indexGroup: "Prototypes",
+    image: "assets/project/reference/gray-placeholder.svg",
+    role: "Computational workflow researcher",
+    audience: "Robotic fabrication, computational design, design-engineering workflows",
+    source: "GitHub repository: yilinzheng10/HKS_MADE_StandardBotsRO1",
+    sourceNote: "Repository README describes a computational and robotic workflow for controlling a Standard Bots RO1 arm.",
+    organizations: [
+      ["HKS", "https://www.hksinc.com/"],
+      ["Standard Bots", "https://standardbots.com/"]
     ],
-    summary: "A selected archive of architectural studies spanning BIM, fabrication, iterative design, and sustainable design work from 2022 to 2025.",
-    note: "This archive entry gives the atlas a place for broader architectural work outside the computational systems case studies."
+    evidence: [
+      { type: "media", kind: "NEEDED", label: "Robotics workflow image needed", path: "assets/project/reference/gray-placeholder.svg", caption: "Add a robot setup photo, Grasshopper-to-ROS diagram, or Standard Bots control screenshot." },
+      { type: "link", kind: "CODE", label: "Open GitHub repository", url: "https://github.com/yilinzheng10/HKS_MADE_StandardBotsRO1", caption: "ROS2 realtime API and Standard Bots RO1 documentation repository." }
+    ],
+    summary: "A computational-to-robotic workflow connecting design geometry, inverse kinematics, middleware, ROS2, and Standard Bots control interfaces.",
+    description: [
+      "The repository connects Rhino and Grasshopper geometry with COMPAS, Python middleware, ROS2, StandardOS, and REST API control for the Standard Bots RO1 arm."
+    ],
+    note: "The work treats robotic control as an interoperable design system: geometry, code, and hardware have to remain legible to each other.",
+    links: [["Open repository", "https://github.com/yilinzheng10/HKS_MADE_StandardBotsRO1"]]
+  },
+  {
+    id: "dtbr-headquarters",
+    title: "Office Building Design at DTBR",
+    year: "2024",
+    type: "Architecture",
+    sections: ["architecture"],
+    status: "Studio",
+    tags: ["headquarters", "urban site", "Baton Rouge"],
+    tools: "Rhinoceros, Grasshopper, CoveTool, Google Earth Pro, Adobe Suite, Procreate",
+    coordinates: "Downtown Baton Rouge, LA / Mississippi River",
+    media: ["PDF section", "Site analysis", "Vicinity diagrams", "Access studies"],
+    indexGroup: "Architectural Design and System",
+    image: "assets/project/architecture/dtbr-preview.png",
+    role: "Architectural designer",
+    audience: "Architecture portfolio review, urban and environmental design systems",
+    source: "260704_ARCH_DTBR.pdf",
+    sourceNote: "Section prepared from the attached DTBR architecture PDF.",
+    organizations: [
+      ["LSU School of Architecture", "https://design.lsu.edu/architecture/"]
+    ],
+    pageFrames: [
+      { path: "assets/project/architecture/pages/dtbr-1.png", label: "Office Building Design at DTBR page 1" },
+      { path: "assets/project/architecture/pages/dtbr-2.png", label: "Office Building Design at DTBR page 2" },
+      { path: "assets/project/architecture/pages/dtbr-3.png", label: "Office Building Design at DTBR page 3" },
+      { path: "assets/project/architecture/pages/dtbr-4.png", label: "Office Building Design at DTBR page 4" }
+    ],
+    evidence: [
+      { type: "media", kind: "PDF", label: "DTBR preview", path: "assets/project/architecture/pages/dtbr-1.png", caption: "" }
+    ],
+    summary: "An architectural design study for a headquarters in Downtown Baton Rouge, organized around site conditions, access, vicinity, and the river-edge urban context.",
+    description: [
+      "Office Building Design at DTBR studies an urban office building in Downtown Baton Rouge through site access, river-edge adjacency, massing, and contextual organization."
+    ],
+    note: "Downtown Baton Rouge becomes a framework for testing how building organization responds to circulation, site edges, and civic scale."
+  },
+  {
+    id: "harborfront-park",
+    title: "Harborfront Park",
+    year: "2023",
+    type: "Architecture",
+    sections: ["architecture"],
+    status: "Studio",
+    tags: ["coastal site", "marine ecology", "Miami"],
+    tools: "Rhinoceros, ClimateStudio, ArcGIS, Lumion, Google Earth Pro, Adobe Suite",
+    coordinates: "Miami, FL / coastal harborfront",
+    media: ["PDF section", "Coastal analysis", "Climate risk", "Public realm"],
+    indexGroup: "Architectural Design and System",
+    image: "assets/project/architecture/harborfront-preview.png",
+    role: "Architectural designer",
+    audience: "Architecture portfolio review, coastal systems, public-space design",
+    source: "260704_ARCH_MIAMI.pdf",
+    sourceNote: "Section prepared from the attached Miami Harborfront Park PDF.",
+    organizations: [
+      ["LSU School of Architecture", "https://design.lsu.edu/architecture/"]
+    ],
+    pageFrames: [
+      { path: "assets/project/architecture/pages/harborfront-1.png", label: "Harborfront Park page 1", caption: "Opening board from the Harborfront Park PDF." },
+      { path: "assets/project/architecture/pages/harborfront-2.png", label: "Harborfront Park page 2", caption: "Second board from the Harborfront Park PDF." },
+      { path: "assets/project/architecture/pages/harborfront-3.png", label: "Harborfront Park page 3", caption: "Third board from the Harborfront Park PDF." }
+    ],
+    evidence: [
+      { type: "media", kind: "PDF", label: "Harborfront preview", path: "assets/project/architecture/pages/harborfront-1.png", caption: "" }
+    ],
+    summary: "A Miami coastal-site design study positioned around harborfront public space, marine life, seafood systems, climate change, storms, and hurricane exposure.",
+    description: [
+      "Harborfront Park frames a Miami coastal site as a public realm system shaped by marine ecology, seafood culture, storm exposure, and climate risk."
+    ],
+    note: "The project uses coastal context as a design driver for public space, environmental adaptation, and civic program."
+  },
+  {
+    id: "green-wall-systems",
+    title: "Green Wall Systems & Fabrication",
+    year: "2023",
+    type: "Architecture",
+    sections: ["architecture"],
+    status: "Built research",
+    tags: ["green wall", "fabrication", "environmental systems"],
+    tools: "Rhino, Grasshopper, CNC routing, Clayton, 3D Potter, Climate Consultant, Adobe Suite",
+    coordinates: "LSU Hill Farm / Baton Rouge, LA",
+    media: ["PDF section", "Fabrication process", "Wall-system research"],
+    indexGroup: "Architectural Design and System",
+    image: "assets/project/architecture/green-wall-preview.png",
+    role: "Research, design, coordination, and fabrication",
+    audience: "Fabrication research, environmental systems, architecture portfolio review",
+    source: "260704_ARCH_GREENWALL.pdf",
+    sourceNote: "Section prepared from the attached Green Wall Systems & Fabrication PDF.",
+    organizations: [
+      ["LSU Hilltop Arboretum", "https://www.lsu.edu/hilltop/index.php"],
+      ["Louisiana State University", "https://www.lsu.edu/"]
+    ],
+    pageFrames: [
+      { path: "assets/project/architecture/pages/green-wall-1.png", label: "Green Wall page 1", caption: "Opening page from the Green Wall Systems & Fabrication PDF." },
+      { path: "assets/project/architecture/pages/green-wall-2.png", label: "Green Wall page 2", caption: "Second page from the Green Wall Systems & Fabrication PDF." }
+    ],
+    evidence: [
+      { type: "media", kind: "PDF", label: "Green wall preview", path: "assets/project/architecture/pages/green-wall-1.png", caption: "" }
+    ],
+    summary: "A group research and fabrication project for LSU Hill Farm, connecting green wall systems, environmental testing, CNC/ceramic workflows, and built prototype coordination.",
+    description: [
+      "Green Wall Systems & Fabrication connects environmental systems research with material prototyping, fabrication coordination, and full-scale testing for LSU Hill Farm."
+    ],
+    note: "The work uses fabrication as a way to test environmental performance and system assembly."
+  },
+  {
+    id: "continual-delay",
+    title: "Continual Delay",
+    year: "2022",
+    type: "Architecture",
+    sections: ["architecture"],
+    status: "Studio",
+    tags: ["spatial exploration"],
+    tools: "Architectural drawing, model documentation",
+    coordinates: "Architecture studio / sequence study",
+    media: ["PDF section", "Line drawings", "Spatial sequence"],
+    indexGroup: "Architectural Design and System",
+    image: "assets/project/architecture/continual-delay-preview.png",
+    role: "Architectural designer",
+    audience: "Architecture portfolio review, spatial sequence, conceptual design systems",
+    source: "260704_ARCH1_ Continual Delay -Yilin Zheng.pdf",
+    sourceNote: "Section prepared from the attached Continual Delay PDF.",
+    pageFrames: [
+      { path: "assets/project/architecture/pages/continual-selected-3.png", label: "Continual Delay page 3" },
+      { path: "assets/project/architecture/pages/continual-selected-4.png", label: "Continual Delay page 4" },
+      { path: "assets/project/architecture/pages/continual-selected-5.png", label: "Continual Delay page 5" },
+      { path: "assets/project/architecture/pages/continual-selected-7.png", label: "Continual Delay page 7" }
+    ],
+    evidence: [
+      { type: "media", kind: "PDF", label: "Continual Delay preview", path: "assets/project/architecture/pages/continual-selected-3.png", caption: "" }
+    ],
+    summary: "A studio project framed around spatial sequence, drawing systems, and the idea of delay as an architectural ordering device.",
+    description: [
+      "Continual Delay explores spatial sequence, pause, and perception through architectural drawing and model-based documentation."
+    ],
+    note: "Delay becomes a spatial condition: movement is staged through thresholds, intervals, and changing visual access."
   },
   {
     id: "bento",
@@ -85,13 +254,16 @@ const works = [
     tools: "Grasshopper, Mapbox, GIS, Rhino, Figma, Python, HTML, CSS, JavaScript",
     coordinates: "Columbia GSAPP / CDP",
     media: ["Layout GIF", "Web UI", "Rhino.Compute", "3D model"],
-    indexGroup: "Spatial Systems",
-    image: "assets/bento_layout.gif",
-    secondary: ["assets/Bento_Rhino.Compute.gif"],
+    indexGroup: "Prototypes",
+    image: "assets/Bento_Rhino.Compute.gif",
+    secondary: ["assets/bento_layout.gif", "assets/Beno_Rhino.Compute.mp4"],
     role: "Computational designer / web interface developer",
     audience: "Retail spatial management, computational design, tool prototyping",
     source: "YilinZhengDesign Works / Medium article / web-gh repository",
     sourceNote: "Reference content consolidated from the original BENTO portfolio entries.",
+    organizations: [
+      ["Columbia GSAPP", "https://www.arch.columbia.edu/"]
+    ],
     evidence: [
       { type: "media", kind: "LAYOUT", label: "BENTO layout study", path: "assets/bento_layout.gif", caption: "Animated spatial layout study for small retail store planning." },
       { type: "media", kind: "COMPUTE", label: "Rhino.Compute UI demo", path: "assets/Bento_Rhino.Compute.gif", caption: "Web interface responding to Grasshopper and Rhino model updates." },
@@ -106,17 +278,49 @@ const works = [
     ]
   },
   {
+    id: "emotisync-2026",
+    title: "EmotiSync",
+    year: "2026",
+    type: "Archive",
+    sections: ["prototypes"],
+    status: "Archived",
+    tags: ["interface", "TypeScript", "web prototype"],
+    tools: "TypeScript, Vercel, web interface",
+    coordinates: "Prototype archive / 2026",
+    media: ["Repository", "Live archive link", "Interface placeholder"],
+    indexGroup: "Prototypes",
+    image: "assets/project/reference/gray-placeholder.svg",
+    role: "Prototype archive maintainer",
+    audience: "Interface experiments, archived web prototypes, process documentation",
+    source: "GitHub repository: yilinzheng10/emotisync2026",
+    sourceNote: "User requested this repository be added as archive.",
+    evidence: [
+      { type: "media", kind: "NEEDED", label: "EmotiSync image needed", path: "assets/project/reference/gray-placeholder.svg", caption: "Add one interface screenshot, interaction frame, or deployment still." },
+      { type: "link", kind: "CODE", label: "Open GitHub repository", url: "https://github.com/yilinzheng10/emotisync2026", caption: "Archived TypeScript repository." },
+      { type: "link", kind: "LIVE", label: "Open live archive", url: "https://emotisync2026.vercel.app", caption: "Live Vercel deployment linked from the repository metadata." }
+    ],
+    summary: "EmotiSync is an archived TypeScript web prototype exploring interface behavior and affective synchronization.",
+    description: [
+      "EmotiSync records a working web prototype and the decisions embedded in its interface structure."
+    ],
+    note: "The archive keeps an earlier interface experiment visible as a trace of process and tooling.",
+    links: [
+      ["Open repository", "https://github.com/yilinzheng10/emotisync2026"],
+      ["Open live archive", "https://emotisync2026.vercel.app"]
+    ]
+  },
+  {
     id: "terracurve",
     title: "Terracurve Tower",
     year: "2024",
     type: "System",
-    sections: ["systems", "archive"],
+    sections: ["architecture"],
     status: "Designed",
     tags: ["BIM", "mixed-use", "climate-responsive envelope"],
     tools: "Rhino, Grasshopper, Revit, ClimateStudio, Lumion, Adobe Suite",
     coordinates: "New York, NY / NOMAD",
     media: ["BIM model", "Climate analysis", "Drawings", "Renderings"],
-    indexGroup: "Spatial Systems",
+    indexGroup: "Architectural Design and System",
     image: "assets/project/BIM/overview1.png",
     secondary: [
       "assets/project/BIM/BIM-climateanalysis.jpg",
@@ -128,6 +332,9 @@ const works = [
     audience: "Architecture, BIM interoperability, climate-responsive envelope design",
     source: "YilinZhengDesign BIM project page",
     sourceNote: "Reference content consolidated from the dedicated Terracurve Tower documentation page.",
+    organizations: [
+      ["Columbia GSAPP", "https://www.arch.columbia.edu/"]
+    ],
     evidence: [
       { type: "media", kind: "CLIMATE", label: "Site and climate analysis", path: "assets/project/BIM/BIM-climateanalysis.jpg", caption: "Sun exposure and wind analysis guided orientation and facade articulation." },
       { type: "media", kind: "FACADE", label: "Grasshopper facade workflow", path: "assets/project/BIM/facade_gh.png", caption: "Parametric facade/form-finding translated into BIM documentation." },
@@ -142,25 +349,33 @@ const works = [
     title: "Where the Water Reached",
     year: "2025",
     type: "Prototype",
-    sections: ["prototypes", "emerging-systems"],
+    sections: ["prototypes", "systems"],
     status: "Live",
     tags: ["flood risk", "resources", "machine learning"],
     tools: "Grasshopper, Mapbox, GIS, Rhino, Figma, Python, Web UI, Machine Learning",
     coordinates: "Flood risk / public resources",
     media: ["Live tool", "Demo video", "User journey", "Interface"],
-    indexGroup: "Prototypes",
+    indexGroup: "Spatial Systems & Research",
     image: "assets/0402.mp4",
+    secondary: ["assets/tool_prototype.mov", "assets/gh_visualization.mp4"],
     role: "Tool designer / researcher",
     audience: "Home buyers, flood-risk resource navigation, public-facing climate tools",
     source: "YilinZhengDesign Works / FloodRisk prototype",
     sourceNote: "Reference content consolidated from the original flood-risk prototype and user-flow entries.",
+    organizations: [
+      ["Columbia GSAPP", "https://www.arch.columbia.edu/"]
+    ],
     evidence: [
       { type: "media", kind: "DEMO", label: "Prototype demo", path: "assets/0402.mp4", caption: "Video capture of the flood-risk resource tool." },
       { type: "link", kind: "LIVE", label: "Open prototype", url: "https://yilinzheng10.github.io/FloodRisk/", caption: "Live prototype linked from the original portfolio." },
       { type: "link", kind: "FLOW", label: "User mapping", url: "https://embed.figma.com/board/GQ3y8G3sUmI5mdqXefN0AB/User-Mapping?node-id=0-1&embed-host=share", caption: "User journey and user-flow research for tool design." }
     ],
     summary: "A prototype tool for navigating flood-risk resources and translating research into an accessible public-facing interface.",
-    note: "The tool development includes user journey and user flow research.",
+    description: [
+      "Where the Water Reached brings together precursor housing and flood-risk research and turns geographic evidence into a public-facing decision support prototype.",
+      "The project studies information gaps in housing and climate-risk communication, then tests how mapping, user-flow research, and interactive resources can make long-term risk easier to understand."
+    ],
+    note: "The tool development includes user journey research, geospatial visualization, and flood-risk resource navigation.",
     links: [
       ["Open prototype", "https://yilinzheng10.github.io/FloodRisk/"],
       ["User mapping", "https://embed.figma.com/board/GQ3y8G3sUmI5mdqXefN0AB/User-Mapping?node-id=0-1&embed-host=share"]
@@ -168,7 +383,7 @@ const works = [
   },
   {
     id: "high-risk-areas",
-    title: "High-Risk Areas & People Who Live There",
+    title: "Environmental Risk & People Who Lives There",
     year: "2024",
     type: "Research",
     sections: ["field-notes", "systems"],
@@ -177,66 +392,113 @@ const works = [
     tools: "Mapbox, Leaflet",
     coordinates: "Spatial research / web map",
     media: ["Story map", "Geospatial data", "Webpage"],
-    indexGroup: "Research",
+    indexGroup: "Spatial Systems & Research",
     image: "assets/Mapbox.png",
+    hidePrimaryImage: true,
+    embedFrames: [
+      { kind: "WEB", label: "Environmental risk story map", path: "https://yilinzheng10.github.io/MAPBOX-Storytelling/" }
+    ],
     role: "Spatial researcher / web map author",
     audience: "Housing justice research, flood-risk communication, public web storytelling",
     source: "YilinZhengDesign Works / GSAPP Colloquium map embed",
     sourceNote: "Reference content consolidated from the original portfolio and GSAPP embedded project page.",
+    organizations: [
+      ["Columbia GSAPP", "https://www.arch.columbia.edu/"],
+      ["GSAPP CDP Colloquium II", "https://gsapp-cdp.github.io/colloquium-2-2024/"]
+    ],
     evidence: [
       { type: "media", kind: "MAP", label: "Story map preview", path: "assets/Mapbox.png", caption: "Mapbox/Leaflet narrative about high-risk areas and the people who live there." },
       { type: "link", kind: "LIVE", label: "Open story map", url: "https://yilinzheng10.github.io/MAPBOX-Storytelling/", caption: "Original interactive map embedded in the GSAPP project page." }
     ],
     summary: "A spatial account of the tension between affordability, social ties, and long-term flood risk.",
+    description: [
+      "A spatial account of the tension between affordability, social ties, and long-term flood risk.",
+      "Organize geographic evidence into a web-based spatial narrative."
+    ],
     note: "The project uses web mapping to connect risk geography with the people and housing conditions represented by the data.",
     links: [["Open story map", "https://yilinzheng10.github.io/MAPBOX-Storytelling/"]]
   },
   {
-    id: "extreme-weather-housing",
-    title: "Explore, Explain, Propose",
-    year: "2024",
-    type: "Research",
-    sections: ["field-notes", "emerging-systems"],
-    status: "Published",
-    tags: ["extreme weather", "housing justice", "visualization"],
-    tools: "Grasshopper, geospatial analysis, data visualization",
-    coordinates: "Columbia GSAPP / Colloquium II",
-    media: ["Visualization video", "Research page", "Spatial analysis"],
-    indexGroup: "Research",
-    image: "assets/gh_visualization.mp4",
-    role: "Design researcher / computational visualization author",
-    audience: "Housing justice, climate-risk communication, real-estate decision support",
-    source: "GSAPP CDP Colloquium II 2024 / Yilin Zheng project page",
-    sourceNote: "Reference content consolidated from the public GSAPP project page.",
+    id: "googlemaps-review-scraper",
+    title: "Public-Space Review Scraper",
+    year: "2025",
+    type: "Data Tool",
+    sections: ["prototypes", "field-notes"],
+    status: "Repository",
+    tags: ["public space", "sentiment analysis", "Google Maps reviews"],
+    tools: "Python, HTML, web scraping, review data",
+    coordinates: "Dallas Downtown Masterplan / public-space reviews",
+    media: ["Repository", "README", "Data-method placeholder"],
+    indexGroup: "Prototypes",
+    image: "assets/project/reference/gray-placeholder.svg",
+    role: "Data-method researcher",
+    audience: "Urban research, public-space analysis, data collection methods",
+    source: "GitHub repository: yilinzheng10/scraping-reviews-from-googlemaps",
+    sourceNote: "Repository README describes user sentiment analysis of public spaces based on Google Maps reviews for a Dallas Downtown Masterplan design proposal.",
     evidence: [
-      { type: "media", kind: "VIS", label: "Grasshopper visualization", path: "assets/gh_visualization.mp4", caption: "Spatial visualization from the computational methods section of the GSAPP project." },
-      { type: "link", kind: "PROJECT", label: "View GSAPP project", url: "https://gsapp-cdp.github.io/colloquium-2-2024/work/yilin/", caption: "Full public documentation for the research sequence." },
-      { type: "link", kind: "SOURCE", label: "Interactive map", url: "https://yilinzheng10.github.io/MAPBOX-Storytelling/", caption: "Original interactive map embedded in the GSAPP page." },
-      { type: "link", kind: "PROTOTYPE", label: "Figma prototype", url: "https://www.figma.com/proto/MdrsgkpgzGYVkngkKqGa8t/FinancialModelDraft?node-id=653-105&node-type=frame&t=seEuk2McP2OwCPUb-1&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=653%3A105", caption: "Prototype link from the GSAPP documentation." }
+      { type: "media", kind: "NEEDED", label: "Review scraper image needed", path: "assets/project/reference/gray-placeholder.svg", caption: "Add a data-flow diagram, notebook output, or sentiment-analysis map." },
+      { type: "link", kind: "CODE", label: "Open GitHub repository", url: "https://github.com/yilinzheng10/scraping-reviews-from-googlemaps", caption: "Repository for scraping Google Maps reviews and ratings." },
+      { type: "link", kind: "README", label: "README editing page", url: "https://github.com/yilinzheng10/scraping-reviews-from-googlemaps/new/main?filename=README.md", caption: "User-provided README page reference for this repository." }
     ],
-    summary: "Research into the politics of extreme weather events and housing justice through spatial analysis and visualization.",
-    note: "The project moves from exploration and explanation toward a design proposition.",
-    links: [["View project", "https://gsapp-cdp.github.io/colloquium-2-2024/work/yilin/"]]
+    summary: "A data-collection method for reading public-space experience through Google Maps reviews, ratings, and sentiment signals.",
+    description: [
+      "This repository supports a Dallas Downtown Masterplan design proposal by treating online reviews as a source of public-space evidence.",
+      "The scraper collects review and rating data so qualitative urban experience can be compared with spatial decisions, site priorities, and public perception."
+    ],
+    note: "The method treats everyday reviews as spatial evidence rather than as isolated platform comments.",
+    links: [
+      ["Open repository", "https://github.com/yilinzheng10/scraping-reviews-from-googlemaps"],
+      ["README page", "https://github.com/yilinzheng10/scraping-reviews-from-googlemaps/new/main?filename=README.md"]
+    ]
+  },
+  {
+    id: "spatial-data-python",
+    title: "Working with Spatial Data in Python",
+    year: "2024",
+    type: "Research Code",
+    sections: ["systems", "field-notes", "prototypes"],
+    status: "Repository",
+    tags: ["spatial data", "Python", "NYC"],
+    tools: "Python, geospatial analysis, public spatial data",
+    coordinates: "NYC / public spatial research",
+    media: ["Repository", "Spatial analysis notes", "Method placeholder"],
+    indexGroup: "Spatial Systems & Research",
+    image: "assets/project/reference/gray-placeholder.svg",
+    role: "Spatial-data researcher",
+    audience: "Geospatial research, design computation, public-data workflows",
+    source: "GitHub repository: yilinzheng10/Working-with-Spatial-Data-in-Python",
+    sourceNote: "Repository README describes NYC public spatial research and analysis exploration.",
+    evidence: [
+      { type: "media", kind: "NEEDED", label: "Spatial data image needed", path: "assets/project/reference/gray-placeholder.svg", caption: "Add a notebook screenshot, map output, or geospatial workflow diagram." },
+      { type: "link", kind: "CODE", label: "Open GitHub repository", url: "https://github.com/yilinzheng10/Working-with-Spatial-Data-in-Python", caption: "Python repository for working with public spatial data." }
+    ],
+    summary: "A Python-based spatial-data research repository for exploring New York City public spatial datasets as design material.",
+    description: [
+      "Working with Spatial Data in Python is a methods archive for learning how public datasets can be cleaned, joined, mapped, and interpreted.",
+      "The repository treats Python as a working language for cleaning, joining, mapping, and interpreting urban datasets."
+    ],
+    note: "The repository frames Python as a working language for spatial research and design reasoning.",
+    links: [["Open repository", "https://github.com/yilinzheng10/Working-with-Spatial-Data-in-Python"]]
   },
   {
     id: "solar-sfr",
-    title: "Solar-Integrated SFR Investment",
+    title: "Energy-Integrated Housing Systems",
     year: "2025",
     type: "Research",
-    sections: ["systems", "emerging-systems"],
+    sections: ["systems"],
     status: "Study",
     tags: ["housing", "solar", "real estate analytics"],
     tools: "Python, Excel model",
     coordinates: "Dallas-Fort Worth / SFR",
     media: ["Financial model", "Research deck", "Scenario analysis"],
-    indexGroup: "Research",
-    image: "assets/tool_prototype.mov",
+    indexGroup: "Spatial Systems & Research",
+    image: "assets/project/reference/gray-placeholder.svg",
     role: "Researcher / financial modeler",
     audience: "Housing, real-estate analytics, solar investment strategy",
     source: "YilinZhengDesign Works / Figma research deck",
     sourceNote: "Reference content consolidated from the original housing and real-estate research entry.",
     evidence: [
-      { type: "media", kind: "MODEL", label: "Tool prototype", path: "assets/tool_prototype.mov", caption: "Prototype media from the project asset archive." },
+      { type: "media", kind: "NEEDED", label: "Energy systems image needed", path: "assets/project/reference/gray-placeholder.svg", caption: "" },
       { type: "link", kind: "DECK", label: "View research deck", url: "https://embed.figma.com/slides/AvbF3A74mKKPyBgQYuUm9W/Clinic-Final-Assignment?node-id=1-1179&embed-host=share", caption: "Figma slide deck linked from the original portfolio." }
     ],
     summary: "A study asking whether solar-integrated single-family rentals can unlock returns at scale for private-equity investors in Dallas-Fort Worth, or introduce new cost barriers.",
@@ -248,7 +510,7 @@ const works = [
     title: "ZINE Playground",
     year: "2024",
     type: "Exploration",
-    sections: ["archive", "prototypes"],
+    sections: ["prototypes"],
     status: "Live",
     tags: ["text-to-3D", "web experiment", "zine"],
     tools: "Web interface, text-to-3D",
@@ -270,60 +532,17 @@ const works = [
   }
 ];
 
-const narratives = {
-  "climate-shading": {
-    question: "How does the rotational axis of a responsive shading system affect shade and interior energy consumption?",
-    process: "Simulation and iterative design compare shading-system rotations through Grasshopper, Rhino, ClimateStudio, and Ladybug.",
-    outcome: "A documented performance comparison presented as peer-reviewed research at ACSA 113."
-  },
-  "scaled-model": {
-    question: "How can a digital interface directly control and demonstrate a responsive physical model?",
-    process: "A SwiftUI interface sends control states to an ESP32 microcontroller, which actuates the model through a servo motor.",
-    outcome: "A working scaled prototype demonstrating the digital-to-physical control loop."
-  },
-  "architectural-studies": {
-    question: "How can architectural studies show design judgment across BIM, fabrication, iteration, and sustainable design?",
-    process: "Selected portfolio work is organized as a broader archive so individual studies can later be split into independent records.",
-    outcome: "A portfolio-level entry that preserves the architecture background behind the systems and prototype work."
-  },
-  "bento": {
-    question: "How can location intelligence support spatial management for the next generation of small retail stores?",
-    process: "BENTO combines location data, GIS, spatial layouts, and a Rhino.Compute web interface that responds to a Grasshopper and Rhino model.",
-    outcome: "A data-driven platform connecting retail decisions, interface design, and generative spatial modeling."
-  },
-  "terracurve": {
-    question: "How can a mixed-use tower integrate program, environmental analysis, complex geometry, and BIM interoperability?",
-    process: "Climate and view analysis inform massing and facade studies; Rhino.Inside translates Grasshopper geometry into a detailed Revit model with coordinated program and elevator zoning.",
-    outcome: "A climate-responsive mixed-use tower developed across analytical, parametric, and BIM workflows."
-  },
-  "where-water-reached": {
-    question: "How can flood-risk research and resources become more navigable through an accessible public tool?",
-    process: "The prototype combines user-flow research, mapping, GIS, interface design, and machine-learning methods in a web-based resource.",
-    outcome: "A live prototype that translates flood-risk information into a navigable public interface."
-  },
-  "high-risk-areas": {
-    question: "How do affordability and social ties shape decisions to remain in places exposed to long-term flood risk?",
-    process: "Mapbox and Leaflet organize geographic evidence into a web-based spatial narrative.",
-    outcome: "A story map connecting risk data with housing conditions and lived social relationships."
-  },
-  "extreme-weather-housing": {
-    question: "How can climate-risk information be consolidated and contextualized before buyers or investors make long-term housing decisions?",
-    process: "The GSAPP project studies online real-estate information gaps, maps user-flow intervention points, cleans and clusters spatial datasets, and uses visualization/prototyping to make flood risk, cost, and value projections more legible.",
-    outcome: "A research sequence that moves from extreme-weather evidence and housing justice toward a de-risk decision-making prototype."
-  },
-  "solar-sfr": {
-    question: "Can solar-integrated single-family rentals unlock returns at scale in Dallas-Fort Worth, or do they introduce new cost barriers?",
-    process: "Python and an Excel model compare housing, energy, cost, and investment scenarios.",
-    outcome: "A real-estate research framework for evaluating the financial implications of solar integration."
-  },
-  "zine-playground": {
-    question: "What can a small web zine reveal when text becomes input for three-dimensional experimentation?",
-    process: "The playground combines web interaction, animated media, and text-to-3D exploration.",
-    outcome: "A live, informal interface for testing playful computational media."
-  }
-};
+works.forEach((work, index) => {
+  work.originalOrder = index;
+});
+works.sort((a, b) => {
+  const yearA = parseInt(a.year, 10) || 0;
+  const yearB = parseInt(b.year, 10) || 0;
+  if (yearA !== yearB) return yearB - yearA;
+  return a.originalOrder - b.originalOrder;
+});
 
-const pageNames = ["cover", "index", "systems", "field-notes", "prototypes", "archive", "emerging-systems", "about"];
+const pageNames = ["cover", "index", "systems", "field-notes", "prototypes", "architecture", "about"];
 const pageSections = document.querySelectorAll("[data-page]");
 const navLinks = document.querySelectorAll(".site-nav a");
 const reader = document.getElementById("reader");
@@ -352,71 +571,110 @@ function renderMedia(path, alt, options = "") {
   return `<img src="${path}" alt="${alt}" loading="lazy">`;
 }
 
-function renderEvidence(work) {
-  const evidence = work.evidence || [];
-  const visibleEvidence = evidence.filter((item) => item.type === "link" || item.path !== work.image);
-  if (visibleEvidence.length) {
-    return visibleEvidence.map((item, index) => {
-      if (item.type === "link") {
-        const host = item.url.replace(/^https?:\/\//, "").split("/")[0];
-        return `
-          <a class="document-link" href="${item.url}" target="_blank" rel="noopener noreferrer">
-            <span>${item.kind || `LINK ${String(index + 1).padStart(2, "0")}`}</span>
-            <strong>${item.label}</strong>
-            <small>${host} ↗</small>
-            <em>${item.caption || ""}</em>
-          </a>`;
-      }
-      return `
-        <figure class="document-figure media-record">
-          <div class="visual-frame evidence-media">${renderMedia(item.path, item.label, "controls")}</div>
-          <figcaption class="documentation-caption compact"><span class="figure-number">${item.kind || `DOC. ${String(index + 1).padStart(2, "0")}`}</span><div><strong>${item.label}</strong><p>${item.caption || "Project documentation"}</p></div></figcaption>
-        </figure>`;
-    }).join("");
-  }
-
-  const secondary = (work.secondary || []).map((path, index) => `
-    <figure class="document-figure media-record">
-      <div class="visual-frame evidence-media">${renderMedia(path, `${work.title} supporting document ${index + 1}`, "controls")}</div>
-      <figcaption class="documentation-caption compact"><span class="figure-number">DOC. ${String(index + 1).padStart(2, "0")}</span><div><strong>Supporting record</strong><p>${work.media[index] || "Project documentation"}</p></div></figcaption>
-    </figure>
-  `);
-  const links = (work.links || []).map(([label, url], index) => `
-    <a class="document-link" href="${url}" target="_blank" rel="noopener noreferrer">
-      <span>LINK ${String(index + 1).padStart(2, "0")}</span><strong>${label}</strong><small>${url.replace(/^https?:\/\//, "").split("/")[0]} ↗</small>
-    </a>
-  `);
-  return [...secondary, ...links].join("");
+function getSourceLinks(work) {
+  const links = [];
+  const seen = new Set();
+  (work.evidence || []).forEach((item) => {
+    if (item.type !== "link" || seen.has(item.url)) return;
+    seen.add(item.url);
+    links.push({ label: item.label, url: item.url });
+  });
+  (work.links || []).forEach(([label, url]) => {
+    if (seen.has(url)) return;
+    seen.add(url);
+    links.push({ label, url });
+  });
+  return links;
 }
 
-function renderNarrative(work, narrative) {
-  const sections = [
-    ["Question", narrative.question],
-    ["Method", narrative.process],
-    ["Outcome", narrative.outcome],
-    ["Context", work.note]
-  ].filter(([, value]) => value);
+function renderInlineLinks(links) {
+  if (!links.length) return "";
+  return links.map((link) => `<a href="${link.url}" target="_blank" rel="noopener noreferrer">${link.label}</a>`).join(", ");
+}
 
-  return sections.map(([label, value], index) => `
-    <section class="narrative-panel">
-      <span>${String(index + 1).padStart(2, "0")} / ${label}</span>
-      <p>${value}</p>
-    </section>
+function renderTagChips(tags) {
+  return `<div class="tag-chip-list">${tags.map((tag) => `<span>${tag}</span>`).join("")}</div>`;
+}
+
+function renderOrganizationLinks(work) {
+  const organizations = work.organizations || [];
+  if (!organizations.length) return "";
+  return `<span class="context-links">${organizations.map(([label, url]) => `<a href="${url}" target="_blank" rel="noopener noreferrer">${label}</a>`).join(" / ")}</span>`;
+}
+
+function renderProjectDescription(work) {
+  const description = [...(work.description || [work.summary])];
+  const context = renderOrganizationLinks(work);
+  if (context || work.note) description.push(`${context}${work.note || ""}`);
+  return `
+    <div class="project-description">
+      ${description.filter(Boolean).map((paragraph) => `<p>${paragraph}</p>`).join("")}
+    </div>
+  `;
+}
+
+function renderKeyFrames(work) {
+  const placeholderPath = "assets/project/reference/gray-placeholder.svg";
+  const frames = work.pageFrames
+    ? work.pageFrames.map((frame, index) => ({ ...frame, kind: `PAGE ${String(index + 1).padStart(2, "0")}` }))
+    : [
+      ...(work.hidePrimaryImage ? [] : [{ path: work.image, label: work.title, caption: work.summary }]),
+      ...(work.evidence || [])
+        .filter((item) => item.type === "media" && item.path !== work.image)
+        .map((item) => ({ path: item.path, label: item.label, caption: item.caption })),
+      ...(work.secondary || [])
+        .slice(0, 3)
+        .map((item, index) => {
+          const frame = typeof item === "string" ? { path: item } : item;
+          return { ...frame, label: frame.label || `${work.title} supporting visual ${index + 1}`, caption: frame.caption || work.media[index + 1] || "Supporting project visual." };
+        })
+    ];
+
+  if (work.embedFrame) frames.push({ ...work.embedFrame, type: "embed", kind: "PDF" });
+  (work.embedFrames || []).forEach((frame) => frames.push({ ...frame, type: "embed", kind: frame.kind || "FRAME" }));
+  const uniqueFrames = frames.filter((frame, index, list) =>
+    index === list.findIndex((candidate) => candidate.path === frame.path && candidate.type === frame.type)
+  );
+  const hasRealMedia = uniqueFrames.some((frame) => frame.path !== placeholderPath && frame.type !== "embed");
+  const displayFrames = hasRealMedia
+    ? uniqueFrames.filter((frame) => frame.path !== placeholderPath)
+    : uniqueFrames;
+
+  return displayFrames.map((frame, index) => `
+    <figure class="key-frame ${index === 0 ? "key-frame-primary" : ""} ${frame.mirror ? "is-mirrored" : ""}">
+      <div class="visual-frame">
+        ${frame.type === "embed" ? `<iframe src="${frame.path}" title="${frame.label}" loading="lazy"></iframe>` : renderMedia(frame.path, frame.label, "controls autoplay")}
+      </div>
+    </figure>
   `).join("");
 }
 
+function sortWorksByYear(entries) {
+  return [...entries].sort((a, b) => {
+    const yearA = parseInt(a.work.year, 10) || 0;
+    const yearB = parseInt(b.work.year, 10) || 0;
+    if (yearA !== yearB) return yearB - yearA;
+    return a.index - b.index;
+  });
+}
+
 function renderIndex(filter = "all") {
-  const visibleWorks = works
+  const visibleWorks = sortWorksByYear(works
     .map((work, index) => ({ work, index }))
-    .filter(({ work }) => filter === "all" || work.sections.includes(filter));
+    .filter(({ work }) => filter === "all" || work.sections.includes(filter)));
   const container = document.getElementById("master-index");
-  const groups = ["Research", "Spatial Systems", "Prototypes"];
+  const groups = [
+    ["Spatial Systems & Research", "Questions and evidence."],
+    ["Prototypes", "Interfaces, models, and working tests."],
+    ["Architectural Design and System", "Design, data, parameter."]
+  ];
   container.innerHTML = visibleWorks.length ? groups.map((group) => {
-    const entries = visibleWorks.filter(({ work }) => work.indexGroup === group);
+    const [groupTitle, groupSubtitle] = group;
+    const entries = visibleWorks.filter(({ work }) => work.indexGroup === groupTitle);
     if (!entries.length) return "";
     return `<section class="index-group">
-      <h2>${group}</h2>
-      <p>${group === "Research" ? "Questions, evidence, and environmental inquiry." : group === "Spatial Systems" ? "Buildings, data, and operational frameworks." : "Interfaces, models, and working tests."}</p>
+      <h2>${groupTitle}</h2>
+      <p>${groupSubtitle}</p>
       <div class="index-group-list">${entries.map(({ work, index }) =>
         workButton(work, index, "index-row", `
           <span class="row-title">${work.title}</span>
@@ -444,7 +702,7 @@ function updateIndexPreview(index) {
 function renderCollections() {
   document.querySelectorAll("[data-collection]").forEach((container) => {
     const section = container.dataset.collection;
-    const entries = works.map((work, index) => ({ work, index })).filter(({ work }) => work.sections.includes(section));
+    const entries = sortWorksByYear(works.map((work, index) => ({ work, index })).filter(({ work }) => work.sections.includes(section)));
 
     if (section === "field-notes") {
       container.innerHTML = entries.map(({ work, index }) =>
@@ -471,7 +729,8 @@ function renderCollections() {
 
 function showPage() {
   const route = location.hash.replace("#", "") || "cover";
-  const page = pageNames.includes(route) ? route : "cover";
+  const normalizedRoute = route === "emerging-systems" ? "systems" : route === "archive" ? "architecture" : route;
+  const page = pageNames.includes(normalizedRoute) ? normalizedRoute : "cover";
   pageSections.forEach((section) => { section.hidden = section.dataset.page !== page; });
   navLinks.forEach((link) => link.classList.toggle("is-active", link.hash === `#${page}`));
   document.querySelector(".site-nav").classList.remove("is-open");
@@ -481,41 +740,23 @@ function showPage() {
 
 function renderReader(index) {
   const work = works[index];
-  const narrative = narratives[work.id];
-  const evidenceMarkup = renderEvidence(work);
   return `
     <div class="entry-template">
       <header class="entry-intro">
         <div class="entry-title-block">
-          <p class="kicker">${work.type} / ${work.status} / ${work.year}</p>
+          <p class="kicker">${work.type} / ${work.year}</p>
           <h1>${work.title}</h1>
-          <p class="reader-summary">${narrative.question}</p>
         </div>
         <dl class="reader-meta">
-          <div><dt>Role</dt><dd>${work.role || "Designer / researcher"}</dd></div>
+          <div><dt>Tags</dt><dd>${renderTagChips(work.tags)}</dd></div>
           <div><dt>Tools</dt><dd>${work.tools}</dd></div>
-          <div><dt>Tags</dt><dd>${work.tags.join(", ")}</dd></div>
-          <div><dt>Location</dt><dd>${work.coordinates}</dd></div>
-          <div><dt>Audience</dt><dd>${work.audience || "Design research and project review"}</dd></div>
-          <div><dt>Media</dt><dd>${work.media.join(" / ")}</dd></div>
-          <div><dt>Source</dt><dd>${work.source || "Portfolio archive"}</dd></div>
         </dl>
       </header>
       <div class="document-sequence">
-        <div class="narrative-strip">${renderNarrative(work, narrative)}</div>
-
-        <figure class="document-figure figure-primary">
-          <div class="visual-frame">
-            ${renderMedia(work.image, `Primary documentation visual for ${work.title}`, "controls autoplay")}
-          </div>
-          <figcaption class="documentation-caption">
-            <span class="figure-number">MEDIA 01</span>
-            <div><strong>Primary record</strong><p>${work.summary}</p></div>
-            <div><strong>Source</strong><p>${work.sourceNote || work.source || "Portfolio archive"}</p><small class="asset-rights">© Yilin Zheng / All rights reserved unless otherwise credited</small></div>
-          </figcaption>
-        </figure>
-
-        ${evidenceMarkup ? `<div class="document-grid">${evidenceMarkup}</div>` : ""}
+        <section class="key-frame-sequence">
+          ${renderKeyFrames(work)}
+        </section>
+        ${renderProjectDescription(work)}
       </div>
     </div>`;
 }
