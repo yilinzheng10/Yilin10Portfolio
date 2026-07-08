@@ -26,11 +26,10 @@ const works = [
     ],
     summary: "A peer-reviewed study of how rotational axes in climate-responsive shading systems affect shade and interior energy consumption.",
     description: [
-      "This research examines how climate-responsive shading geometry can mediate solar exposure, interior shade, and building energy demand under extreme heat conditions.",
-      "Simulation and iterative design compare shading-system rotations, sizes, offsets, through Grasshopper, Rhino, ClimateStudio, and Ladybug.",
-      "The work connects the folding facade research with the published ACSA study, using environmental simulation as a design method for testing how small changes in facade movement can produce measurable changes in performance."
+      "This research examines how climate-responsive shading geometry can mediate solar exposure, interior shade, and building energy demand under extreme heat conditions. Uses environmental simulation as a design method for testing how small changes in facade movement can produce measurable changes in performance.",
+      "Simulation and iterative design compare shading-system rotations, sizes, offsets, through Grasshopper, Rhino, ClimateStudio, and Ladybug."
     ],
-    note: "Presented through the Association of Collegiate Schools of Architecture 113th Annual Meeting: REPAIR.",
+    note: "Presented through the Association of Collegiate Schools of Architecture 113th Annual Meeting: REPAIR, National Conference on Undergraduate Research (NCUR), Stanford Research Conference, and LSU Discover Day.",
     links: [
       ["View paper", "https://drive.google.com/file/d/1uW5BejPOhL1PCofYlklacAtd8AUmlY5u/view?usp=sharing"],
       ["Abstract book", "https://www.acsa-arch.org/wp-content/uploads/2025/02/ACSA113-Abstract-Book-11Feb2025-WebVersion.pdf"]
@@ -84,7 +83,7 @@ const works = [
     sections: ["prototypes", "systems"],
     status: "Repository",
     tags: ["robotics", "ROS2", "computational fabrication"],
-    tools: "Rhino, Grasshopper, COMPAS, Python, ROS2, StandardOS REST API",
+    tools: "Rhino, Grasshopper, Python, ROS2, StandardOS REST API",
     coordinates: "HKS MADE / robotic workflow",
     media: ["Repository", "System architecture", "Control interfaces"],
     indexGroup: "Prototypes",
@@ -101,9 +100,9 @@ const works = [
       { type: "media", kind: "NEEDED", label: "Robotics workflow image needed", path: "assets/project/reference/gray-placeholder.svg", caption: "Add a robot setup photo, Grasshopper-to-ROS diagram, or Standard Bots control screenshot." },
       { type: "link", kind: "CODE", label: "Open GitHub repository", url: "https://github.com/yilinzheng10/HKS_MADE_StandardBotsRO1", caption: "ROS2 realtime API and Standard Bots RO1 documentation repository." }
     ],
-    summary: "A computational-to-robotic workflow connecting design geometry, inverse kinematics, middleware, ROS2, and Standard Bots control interfaces.",
+    summary: "A computational-to-robotic workflow connecting design geometry, inverse kinematics, ROS2, and Standard Bots control interfaces.",
     description: [
-      "The repository connects Rhino and Grasshopper geometry with COMPAS, Python middleware, ROS2, StandardOS, and REST API control for the Standard Bots RO1 arm."
+      "The repository connects Rhino and Grasshopper geometry with Python, ROS2, StandardOS, and REST API control for the Standard Bots RO1 arm."
     ],
     note: "The work treats robotic control as an interoperable design system: geometry, code, and hardware have to remain legible to each other.",
     links: [["Open repository", "https://github.com/yilinzheng10/HKS_MADE_StandardBotsRO1"]]
@@ -351,13 +350,17 @@ const works = [
     type: "Prototype",
     sections: ["prototypes", "systems"],
     status: "Live",
-    tags: ["flood risk", "resources", "machine learning"],
+    sortPriority: -1,
+    tags: ["flood risk", "policies", "spatial analysis", "real estates"],
     tools: "Grasshopper, Mapbox, GIS, Rhino, Figma, Python, Web UI, Machine Learning",
     coordinates: "Flood risk / public resources",
     media: ["Live tool", "Demo video", "User journey", "Interface"],
     indexGroup: "Spatial Systems & Research",
     image: "assets/0402.mp4",
-    secondary: ["assets/tool_prototype.mov", "assets/gh_visualization.mp4"],
+    secondary: ["assets/gh_visualization.mp4"],
+    embedFrames: [
+      { kind: "WEB", label: "Environmental risk story map", path: "https://yilinzheng10.github.io/MAPBOX-Storytelling/" }
+    ],
     role: "Tool designer / researcher",
     audience: "Home buyers, flood-risk resource navigation, public-facing climate tools",
     source: "YilinZhengDesign Works / FloodRisk prototype",
@@ -368,55 +371,20 @@ const works = [
     evidence: [
       { type: "media", kind: "DEMO", label: "Prototype demo", path: "assets/0402.mp4", caption: "Video capture of the flood-risk resource tool." },
       { type: "link", kind: "LIVE", label: "Open prototype", url: "https://yilinzheng10.github.io/FloodRisk/", caption: "Live prototype linked from the original portfolio." },
-      { type: "link", kind: "FLOW", label: "User mapping", url: "https://embed.figma.com/board/GQ3y8G3sUmI5mdqXefN0AB/User-Mapping?node-id=0-1&embed-host=share", caption: "User journey and user-flow research for tool design." }
+      { type: "link", kind: "FLOW", label: "User mapping", url: "https://embed.figma.com/board/GQ3y8G3sUmI5mdqXefN0AB/User-Mapping?node-id=0-1&embed-host=share", caption: "User journey and user-flow research for tool design." },
+      { type: "link", kind: "MAP", label: "Environmental risk story map", url: "https://yilinzheng10.github.io/MAPBOX-Storytelling/", caption: "Earlier spatial narrative integrated into the thesis research." }
     ],
     summary: "A prototype tool for navigating flood-risk resources and translating research into an accessible public-facing interface.",
     description: [
-      "Where the Water Reached brings together precursor housing and flood-risk research and turns geographic evidence into a public-facing decision support prototype.",
-      "The project studies information gaps in housing and climate-risk communication, then tests how mapping, user-flow research, and interactive resources can make long-term risk easier to understand."
+      "Where the Water Reached brings together population distribution, housing gentrification, home pricing, and flood-risk research and turns geographic evidence into a public-facing decision support prototype.",
+      "The project studies information gaps in housing and climate-risk communication, then tests how mapping, user-flow research, and interactive resources can make long-term risk easier to understand, and understanding what nudges the long-term financial decision making for individual investment such as housing."
     ],
-    note: "The tool development includes user journey research, geospatial visualization, and flood-risk resource navigation.",
+    note: "This is a master's thesis at Columbia GSAPP.",
     links: [
       ["Open prototype", "https://yilinzheng10.github.io/FloodRisk/"],
-      ["User mapping", "https://embed.figma.com/board/GQ3y8G3sUmI5mdqXefN0AB/User-Mapping?node-id=0-1&embed-host=share"]
+      ["User mapping", "https://embed.figma.com/board/GQ3y8G3sUmI5mdqXefN0AB/User-Mapping?node-id=0-1&embed-host=share"],
+      ["Environmental risk story map", "https://yilinzheng10.github.io/MAPBOX-Storytelling/"]
     ]
-  },
-  {
-    id: "high-risk-areas",
-    title: "Environmental Risk & People Who Lives There",
-    year: "2024",
-    type: "Research",
-    sections: ["field-notes", "systems"],
-    status: "Live",
-    tags: ["housing", "flood risk", "storytelling"],
-    tools: "Mapbox, Leaflet",
-    coordinates: "Spatial research / web map",
-    media: ["Story map", "Geospatial data", "Webpage"],
-    indexGroup: "Spatial Systems & Research",
-    image: "assets/Mapbox.png",
-    hidePrimaryImage: true,
-    embedFrames: [
-      { kind: "WEB", label: "Environmental risk story map", path: "https://yilinzheng10.github.io/MAPBOX-Storytelling/" }
-    ],
-    role: "Spatial researcher / web map author",
-    audience: "Housing justice research, flood-risk communication, public web storytelling",
-    source: "YilinZhengDesign Works / GSAPP Colloquium map embed",
-    sourceNote: "Reference content consolidated from the original portfolio and GSAPP embedded project page.",
-    organizations: [
-      ["Columbia GSAPP", "https://www.arch.columbia.edu/"],
-      ["GSAPP CDP Colloquium II", "https://gsapp-cdp.github.io/colloquium-2-2024/"]
-    ],
-    evidence: [
-      { type: "media", kind: "MAP", label: "Story map preview", path: "assets/Mapbox.png", caption: "Mapbox/Leaflet narrative about high-risk areas and the people who live there." },
-      { type: "link", kind: "LIVE", label: "Open story map", url: "https://yilinzheng10.github.io/MAPBOX-Storytelling/", caption: "Original interactive map embedded in the GSAPP project page." }
-    ],
-    summary: "A spatial account of the tension between affordability, social ties, and long-term flood risk.",
-    description: [
-      "A spatial account of the tension between affordability, social ties, and long-term flood risk.",
-      "Organize geographic evidence into a web-based spatial narrative."
-    ],
-    note: "The project uses web mapping to connect risk geography with the people and housing conditions represented by the data.",
-    links: [["Open story map", "https://yilinzheng10.github.io/MAPBOX-Storytelling/"]]
   },
   {
     id: "googlemaps-review-scraper",
@@ -458,7 +426,7 @@ const works = [
     type: "Research Code",
     sections: ["systems", "field-notes", "prototypes"],
     status: "Repository",
-    tags: ["spatial data", "Python", "NYC"],
+    tags: ["spatial analytics", "urban analytics", "Python"],
     tools: "Python, geospatial analysis, public spatial data",
     coordinates: "NYC / public spatial research",
     media: ["Repository", "Spatial analysis notes", "Method placeholder"],
@@ -475,9 +443,8 @@ const works = [
     summary: "A Python-based spatial-data research repository for exploring New York City public spatial datasets as design material.",
     description: [
       "Working with Spatial Data in Python is a methods archive for learning how public datasets can be cleaned, joined, mapped, and interpreted.",
-      "The repository treats Python as a working language for cleaning, joining, mapping, and interpreting urban datasets."
+      "The <a href=\"https://github.com/yilinzheng10/Working-with-Spatial-Data-in-Python\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub repository</a> documents Python workflows for cleaning, joining, mapping, and interpreting urban datasets."
     ],
-    note: "The repository frames Python as a working language for spatial research and design reasoning.",
     links: [["Open repository", "https://github.com/yilinzheng10/Working-with-Spatial-Data-in-Python"]]
   },
   {
@@ -654,6 +621,9 @@ function sortWorksByYear(entries) {
     const yearA = parseInt(a.work.year, 10) || 0;
     const yearB = parseInt(b.work.year, 10) || 0;
     if (yearA !== yearB) return yearB - yearA;
+    const priorityA = a.work.sortPriority || 0;
+    const priorityB = b.work.sortPriority || 0;
+    if (priorityA !== priorityB) return priorityA - priorityB;
     return a.index - b.index;
   });
 }
