@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Code system diagram placeholder</title>
+  <desc id="desc">Minimal coordinate grid with interface, repository, and data-flow marks.</desc>
+  <rect width="1200" height="800" fill="#fff"/>
+  <g stroke="#e8e3dc" stroke-width="1">
+    <path d="M0 80H1200M0 160H1200M0 240H1200M0 320H1200M0 400H1200M0 480H1200M0 560H1200M0 640H1200M0 720H1200"/>
+    <path d="M80 0V800M160 0V800M240 0V800M320 0V800M400 0V800M480 0V800M560 0V800M640 0V800M720 0V800M800 0V800M880 0V800M960 0V800M1040 0V800M1120 0V800"/>
+  </g>
+  <g fill="none" stroke="#111" stroke-width="2">
+    <rect x="140" y="150" width="300" height="210"/>
+    <rect x="520" y="220" width="240" height="140"/>
+    <rect x="840" y="150" width="220" height="310"/>
+    <path d="M440 255h80M760 290h80M620 360v130H290V360"/>
+    <path d="M220 220h130M220 260h90M220 300h150"/>
+    <path d="M890 220h120M890 260h80M890 300h140M890 340h70"/>
+    <circle cx="290" cy="560" r="70"/>
+    <path d="M240 560h100M290 510v100"/>
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#111">
+    <text x="70" y="70" font-size="20" font-weight="700">REPOSITORY / TOOL RECORD</text>
+    <text x="70" y="105" font-size="14">code, data, interface, documentation</text>
+    <text x="160" y="405" font-size="12">INPUT</text>
+    <text x="540" y="405" font-size="12">PROCESS</text>
+    <text x="860" y="505" font-size="12">OUTPUT</text>
+    <text x="735" y="660" font-size="12" fill="#f05a1a">LINKED SOURCE / GITHUB</text>
+  </g>
+  <rect x="700" y="625" width="310" height="36" fill="#f05a1a"/>
+</svg>
