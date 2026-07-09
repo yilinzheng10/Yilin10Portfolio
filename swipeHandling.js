@@ -87,7 +87,8 @@ const works = [
     coordinates: "HKS MADE / robotic workflow",
     media: ["Repository", "System architecture", "Control interfaces"],
     indexGroup: "Prototypes",
-    image: "assets/project/reference/standard-bots-repo.png",
+    image: "assets/project/reference/standard-bots-robot-joint-movement.gif",
+    landscapeFrames: true,
     role: "Computational workflow researcher",
     audience: "Robotic fabrication, computational design, design-engineering workflows",
     source: "GitHub repository: yilinzheng10/HKS_MADE_StandardBotsRO1",
@@ -97,7 +98,7 @@ const works = [
       ["Standard Bots", "https://standardbots.com/"]
     ],
     evidence: [
-      { type: "media", kind: "REPO", label: "Standard Bots repository screenshot", path: "assets/project/reference/standard-bots-repo.png", caption: "" },
+      { type: "media", kind: "ROBOT", label: "Standard Bots joint movement", path: "assets/project/reference/standard-bots-robot-joint-movement.gif", caption: "" },
       { type: "link", kind: "CODE", label: "Open GitHub repository", url: "https://github.com/yilinzheng10/HKS_MADE_StandardBotsRO1", caption: "ROS2 realtime API and Standard Bots RO1 documentation repository." }
     ],
     summary: "A computational-to-robotic workflow connecting design geometry, inverse kinematics, ROS2, and Standard Bots control interfaces.",
@@ -280,7 +281,7 @@ const works = [
     summary: "An early spatial composition study using cubic massing, shadow, and interior voids to test form and perception.",
     description: [
       "Form Exploration is an early architecture study from 2020 using cubic space, shadow, and layered openings to test how mass and void can shape perception.",
-      "The image reads as a model-based investigation: form is treated less as an object and more as a sequence of spatial frames, thresholds, and projected depth."
+      "Form explores layers and intersections of cubic spaces nested in a whole."
     ]
   },
   {
@@ -296,6 +297,7 @@ const works = [
     media: ["Layout GIF", "Web UI", "Rhino.Compute", "3D model"],
     indexGroup: "Prototypes",
     image: "assets/Bento_Rhino.Compute.gif",
+    landscapeFrames: true,
     secondary: ["assets/bento_layout.gif", "assets/Beno_Rhino.Compute.mp4"],
     role: "Computational designer / web interface developer",
     audience: "Retail spatial management, computational design, tool prototyping",
@@ -334,6 +336,8 @@ const works = [
     media: ["Repository", "Live archive link", "Interface placeholder"],
     indexGroup: "Prototypes",
     image: "assets/project/reference/gray-placeholder.svg",
+    coverImage: "assets/project/reference/blank-cover.svg",
+    landscapeFrames: true,
     role: "Prototype archive maintainer",
     audience: "Interface experiments, archived web prototypes, process documentation",
     source: "GitHub repository: yilinzheng10/emotisync2026",
@@ -409,6 +413,7 @@ const works = [
     indexGroup: "Spatial Systems & Research",
     image: "assets/0402.mp4",
     uniformFrames: true,
+    landscapeFrames: true,
     secondary: ["assets/gh_visualization.mp4"],
     embedFrames: [
       { kind: "WEB", label: "Environmental risk story map", path: "https://yilinzheng10.github.io/MAPBOX-Storytelling/" }
@@ -443,18 +448,19 @@ const works = [
     type: "Data Tool",
     sections: ["prototypes", "field-notes"],
     status: "Repository",
-    tags: ["public space", "sentiment analysis", "Google Maps reviews"],
-    tools: "Python, HTML, web scraping, review data",
+    tags: ["public space", "sentiment segmentation", "Google Maps reviews"],
+    tools: "Mapbox, JavaScript, web development, Python, sentiment segmentation",
     coordinates: "Dallas Downtown Masterplan / public-space reviews",
     media: ["Repository", "README", "Data-method placeholder"],
     indexGroup: "Prototypes",
-    image: "assets/project/reference/review-scraper-repo.png",
+    image: "assets/project/reference/review-scraper-hero.png",
+    landscapeFrames: true,
     role: "Data-method researcher",
     audience: "Urban research, public-space analysis, data collection methods",
     source: "GitHub repository: yilinzheng10/scraping-reviews-from-googlemaps",
     sourceNote: "Repository README describes user sentiment analysis of public spaces based on Google Maps reviews for a Dallas Downtown Masterplan design proposal.",
     evidence: [
-      { type: "media", kind: "REPO", label: "Review scraper repository screenshot", path: "assets/project/reference/review-scraper-repo.png", caption: "" },
+      { type: "media", kind: "WEB", label: "Review scraper page screenshot", path: "assets/project/reference/review-scraper-hero.png", caption: "" },
       { type: "link", kind: "CODE", label: "Open GitHub repository", url: "https://github.com/yilinzheng10/scraping-reviews-from-googlemaps", caption: "Repository for scraping Google Maps reviews and ratings." },
       { type: "link", kind: "README", label: "README editing page", url: "https://github.com/yilinzheng10/scraping-reviews-from-googlemaps/new/main?filename=README.md", caption: "User-provided README page reference for this repository." }
     ],
@@ -480,13 +486,15 @@ const works = [
     coordinates: "NYC / public spatial research",
     media: ["Repository", "Spatial analysis notes", "Method placeholder"],
     indexGroup: "Spatial Systems & Research",
-    image: "assets/project/reference/spatial-data-python-repo.png",
+    image: "assets/project/reference/spatial-data-python-code.png",
+    coverImage: "assets/project/reference/blank-cover.svg",
+    landscapeFrames: true,
     role: "Spatial-data researcher",
     audience: "Geospatial research, design computation, public-data workflows",
     source: "GitHub repository: yilinzheng10/Working-with-Spatial-Data-in-Python",
     sourceNote: "Repository README describes NYC public spatial research and analysis exploration.",
     evidence: [
-      { type: "media", kind: "REPO", label: "Spatial data repository screenshot", path: "assets/project/reference/spatial-data-python-repo.png", caption: "" },
+      { type: "media", kind: "CODE", label: "Spatial data Python code screenshot", path: "assets/project/reference/spatial-data-python-code.png", caption: "" },
       { type: "link", kind: "CODE", label: "Open GitHub repository", url: "https://github.com/yilinzheng10/Working-with-Spatial-Data-in-Python", caption: "Python repository for working with public spatial data." }
     ],
     summary: "A Python-based spatial-data research repository for exploring New York City public spatial datasets as design material.",
@@ -534,6 +542,7 @@ const works = [
     media: ["Live webpage", "GIF", "Interactive study"],
     indexGroup: "Prototypes",
     image: "assets/zine.gif",
+    landscapeFrames: true,
     role: "Web experiment designer",
     audience: "Computational media, small web experiments, text-to-3D studies",
     source: "YilinZhengDesign Works / ZINE playground",
@@ -608,6 +617,22 @@ function renderInlineLinks(links) {
   return links.map((link) => `<a href="${link.url}" target="_blank" rel="noopener noreferrer">${link.label}</a>`).join(", ");
 }
 
+function getCoverImage(work) {
+  return work.coverImage || work.image;
+}
+
+function getShortSentence(text) {
+  const cleanText = (text || "").replace(/<[^>]*>/g, "").trim();
+  const match = cleanText.match(/^.*?[.!?](?=\s|$)/);
+  return match ? match[0] : cleanText;
+}
+
+function getProjectSubtitle(work) {
+  const tools = work.tools ? `Tools: ${work.tools}.` : "";
+  const summary = getShortSentence(work.summary);
+  return [tools, summary].filter(Boolean).join(" ");
+}
+
 function renderTagChips(tags) {
   return `<div class="tag-chip-list">${tags.map((tag) => `<span>${tag}</span>`).join("")}</div>`;
 }
@@ -657,7 +682,7 @@ function renderKeyFrames(work) {
     : uniqueFrames;
 
   return displayFrames.map((frame, index) => `
-    <figure class="key-frame ${index === 0 ? "key-frame-primary" : ""} ${frame.mirror ? "is-mirrored" : ""} ${work.uniformFrames ? "is-uniform" : ""} ${work.uniformFit === "contain" ? "is-contain" : ""}">
+    <figure class="key-frame ${index === 0 ? "key-frame-primary" : ""} ${frame.mirror ? "is-mirrored" : ""} ${work.uniformFrames ? "is-uniform" : ""} ${work.landscapeFrames ? "is-landscape" : ""} ${work.uniformFit === "contain" ? "is-contain" : ""}">
       <div class="visual-frame">
         ${frame.type === "embed" ? `<iframe src="${frame.path}" title="${frame.label}" loading="lazy"></iframe>` : renderMedia(frame.path, frame.label, "controls autoplay")}
       </div>
@@ -711,7 +736,8 @@ function updateIndexPreview(index) {
   const work = works[index];
   const previewMedia = document.getElementById("index-preview-media");
   if (!previewMedia) return;
-  previewMedia.innerHTML = renderMedia(work.image, `Preview of ${work.title}`, isVideo(work.image) ? "autoplay" : "");
+  const coverImage = getCoverImage(work);
+  previewMedia.innerHTML = renderMedia(coverImage, `Preview of ${work.title}`, isVideo(coverImage) ? "autoplay" : "");
   document.getElementById("index-preview-number").textContent = `${String(index + 1).padStart(2, "0")} / ${String(works.length).padStart(2, "0")}`;
   document.getElementById("index-preview-title").textContent = work.title;
   document.getElementById("index-preview-meta").textContent = `${work.type} / ${work.year} / ${work.status}`;
@@ -727,7 +753,7 @@ function renderCollections() {
       container.innerHTML = entries.map(({ work, index }) =>
         workButton(work, index, "note-row", `
           <time>${work.year}</time>
-          <div><small>${work.status} / ${work.tags[0]}</small><h2>${work.title}</h2></div>
+          <div><small>${work.tools}</small><h2>${work.title}</h2></div>
           <p>${work.summary}</p><span>↗</span>
         `)
       ).join("");
@@ -736,10 +762,11 @@ function renderCollections() {
 
     container.innerHTML = entries.map(({ work, index }) =>
       workButton(work, index, "work-card", `
-        <div class="work-image">${renderMedia(work.image, "", "autoplay")}</div>
+        <div class="work-image">${renderMedia(getCoverImage(work), "", "autoplay")}</div>
         <div class="work-card-text">
           <h2>${work.title}</h2>
-          <div class="work-meta"><span>${work.type} / ${work.status}</span><span>${work.year}</span></div>
+          <p class="work-subtitle">${getProjectSubtitle(work)}</p>
+          <div class="work-meta"><span>${work.year}</span></div>
         </div>
       `)
     ).join("");

@@ -111,7 +111,9 @@ main { min-height: 100vh; padding-top: var(--header); }
 .work-card-text { padding: 9px 0 0; }
 .work-card h2 { margin: 0 0 8px; font-size: 14px; font-weight: 600; }
 .work-card:hover h2, .work-card:focus h2 { color: var(--accent); font-weight: 700; }
-.work-meta { display: flex; justify-content: space-between; gap: 20px; color: var(--muted); font-family: "Courier New", monospace; font-size: 10px; text-transform: uppercase; }
+.work-subtitle { max-width: 560px; margin: 0 0 8px; color: var(--muted); font-size: 12px; line-height: 1.35; }
+.work-subtitle::first-letter { text-transform: uppercase; }
+.work-meta { display: flex; justify-content: flex-end; gap: 20px; color: var(--muted); font-family: "Courier New", monospace; font-size: 10px; text-transform: uppercase; }
 
 .notes-list { padding: 0 var(--pad); }
 .note-row { display: grid; grid-template-columns: 80px minmax(220px, .7fr) minmax(260px, 1fr) 30px; gap: 24px; width: min(100%, 1040px); padding: 18px 0; border: 0; background: none; text-align: left; cursor: pointer; }
@@ -122,11 +124,9 @@ main { min-height: 100vh; padding-top: var(--header); }
 .note-row p { max-width: 470px; margin: 0; font-family: Georgia, serif; line-height: 1.45; }
 
 .about-grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: 8vw; padding: 64px var(--pad) 100px; }
-.practice-statement { max-width: 760px; }
-.practice-statement p { margin: 0 0 20px; font-family: Georgia, serif; font-size: clamp(18px, 1.85vw, 29px); line-height: 1.28; letter-spacing: -.018em; }
-.practice-statement p:first-child { width: fit-content; margin-bottom: 34px; padding-bottom: 8px; border-bottom: 1px solid var(--accent); font-family: Arial, sans-serif; font-size: clamp(22px, 2.35vw, 35px); font-weight: 600; line-height: 1.12; }
-.practice-statement p:nth-child(2) { font-size: clamp(20px, 2.05vw, 32px); }
-.practice-statement p:nth-child(3) { max-width: 680px; color: var(--muted); font-size: clamp(16px, 1.45vw, 23px); line-height: 1.38; }
+.practice-statement { max-width: 700px; }
+.practice-statement p { margin: 0 0 22px; font-size: clamp(16px, 1.35vw, 21px); line-height: 1.45; letter-spacing: -.01em; }
+.practice-statement em { color: var(--accent); font-family: Georgia, serif; font-style: italic; font-weight: 400; }
 .practice-list { margin: 0; border-top: 1px solid var(--ink); }
 .practice-list div { padding: 16px 0 22px; border-bottom: 1px solid var(--line); }
 .practice-list dt { margin-bottom: 12px; color: var(--muted); font-family: "Courier New", monospace; font-size: 10px; text-transform: uppercase; }
@@ -137,10 +137,12 @@ main { min-height: 100vh; padding-top: var(--header); }
 .practice-list a:hover,
 .practice-list a:focus-visible { color: var(--accent); text-decoration: underline; }
 .contact-block dd { line-height: 1.35; }
-.contact-prompt { max-width: 260px; margin: 0 0 14px; font-family: Georgia, serif; font-size: 15px; line-height: 1.25; }
-.contact-links { display: flex; align-items: flex-start; gap: 12px; }
-.contact-logo { display: inline-grid; flex: 0 0 30px; width: 30px; height: 30px; place-items: center; border: 1px solid var(--accent); color: var(--accent); font-family: Arial, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: -.02em; }
-.contact-links a { margin-bottom: 4px; }
+.contact-prompt { max-width: 300px; margin: 0 0 14px; color: var(--accent); font-family: Arial, sans-serif; font-size: 15px; font-weight: 700; line-height: 1.25; }
+.contact-links { display: grid; gap: 5px; }
+.contact-links a { display: inline-flex; align-items: center; gap: 8px; width: fit-content; margin-bottom: 0; }
+.contact-links img { flex: 0 0 16px; width: 16px; height: 16px; object-fit: contain; filter: grayscale(100%) brightness(0); opacity: .9; }
+.contact-links a:hover img,
+.contact-links a:focus-visible img { filter: brightness(0) saturate(100%) invert(40%) sepia(87%) saturate(1919%) hue-rotate(353deg) brightness(101%) contrast(100%); opacity: 1; }
 .about-footer { display: flex; justify-content: space-between; align-items: end; gap: 30px; padding: 24px var(--pad); }
 .about-footer p { max-width: 470px; margin: 0; font-size: 12px; line-height: 1.4; }
 .about-footer span { color: var(--muted); font-family: "Courier New", monospace; font-size: 10px; text-transform: uppercase; }
@@ -187,6 +189,11 @@ main { min-height: 100vh; padding-top: var(--header); }
 .key-frame.is-uniform.is-contain img,
 .key-frame.is-uniform.is-contain video,
 .key-frame.is-uniform.is-contain iframe { object-fit: contain; }
+.key-frame.is-landscape { grid-column: 1 / -1; }
+.key-frame.is-landscape .visual-frame { aspect-ratio: 16 / 9; }
+.key-frame.is-landscape img,
+.key-frame.is-landscape video,
+.key-frame.is-landscape iframe { width: 100%; height: 100%; max-height: none; min-height: 0; object-fit: cover; }
 .key-frame-primary img, .key-frame-primary video { max-height: 78vh; }
 .key-frame iframe { width: 100%; min-height: 68vh; border: 0; background: white; }
 .project-description { display: grid; grid-template-columns: minmax(220px, .55fr) minmax(300px, 1fr); gap: clamp(24px, 5vw, 86px); margin: 0 0 clamp(44px, 6vw, 86px); }
