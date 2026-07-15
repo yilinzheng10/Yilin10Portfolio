@@ -591,7 +591,10 @@ function isVideo(path) {
 
 function renderMedia(path, alt, options = "") {
   if (isVideo(path)) {
-    return `<video ${options} muted loop playsinline preload="metadata" aria-label="${alt}"><source src="${path}"></video>`;
+    const shouldAutoplay = options.includes("autoplay");
+    const controls = options.includes("controls") ? "controls" : "";
+    const autoplayFlag = shouldAutoplay ? 'data-autoplay="true"' : "";
+    return `<video ${controls} ${autoplayFlag} muted loop playsinline preload="none" aria-label="${alt}"><source src="${path}"></video>`;
   }
   return `<img src="${path}" alt="${alt}" loading="lazy">`;
 }
@@ -771,6 +774,36 @@ function renderCollections() {
       `)
     ).join("");
   });
+  observeDeferredVideos();
+}
+
+function observeDeferredVideos() {
+  const videos = document.querySelectorAll("video[data-autoplay]:not([data-observed])");
+  if (!videos.length) return;
+
+  if (!("IntersectionObserver" in window)) {
+    videos.forEach((video) => {
+      video.dataset.observed = "true";
+      video.play().catch(() => {});
+    });
+    return;
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      const video = entry.target;
+      if (entry.isIntersecting) {
+        video.play().catch(() => {});
+      } else {
+        video.pause();
+      }
+    });
+  }, { rootMargin: "160px" });
+
+  videos.forEach((video) => {
+    video.dataset.observed = "true";
+    observer.observe(video);
+  });
 }
 
 function showPage() {
@@ -815,6 +848,16 @@ function updateReaderState(index) {
   applyMediaRights(workBook);
 }
 
+function ensureFlipPageRendered(index) {
+  const pageControl = flipPages[index];
+  const page = pageControl && pageControl.html.querySelector(".work-page");
+  if (!page || page.dataset.rendered === "true") return;
+
+  page.innerHTML = `<div class="work-page-scroll">${renderReader(index)}</div>`;
+  page.dataset.rendered = "true";
+  pageControl.refreshFlip();
+}
+
 function initializeFlipBook() {
   if (flipBookReady) return;
 
@@ -822,15 +865,19 @@ function initializeFlipBook() {
   flipPages = works.map((work, index) => {
     const page = document.createElement("div");
     page.className = "work-page";
-    page.innerHTML = `<div class="work-page-scroll">${renderReader(index)}</div>`;
     return flip.page.create(page, {
       onShowComplete: (pageIndex) => {
+        ensureFlipPageRendered(pageIndex);
         updateReaderState(pageIndex);
-        if (flipPages[pageIndex + 1]) flip.prime(flipPages[pageIndex + 1]);
+        if (flipPages[pageIndex + 1]) {
+          ensureFlipPageRendered(pageIndex + 1);
+          flip.prime(flipPages[pageIndex + 1]);
+        }
       }
     });
   });
 
+  ensureFlipPageRendered(0);
   flip.init(workBook, flipPages[0]);
   flipBookReady = true;
 }
@@ -838,11 +885,15 @@ function initializeFlipBook() {
 function openReader(index) {
   initializeFlipBook();
   const targetIndex = Number(index);
+  ensureFlipPageRendered(targetIndex - 1);
+  ensureFlipPageRendered(targetIndex);
+  ensureFlipPageRendered(targetIndex + 1);
   flip.jumpTo(flipPages[targetIndex], flipPages.slice(0, targetIndex), flipPages[targetIndex + 1], flipPages[0]);
   updateReaderState(targetIndex);
   reader.classList.add("is-open");
   reader.setAttribute("aria-hidden", "false");
   document.body.classList.add("reader-open");
+  observeDeferredVideos();
   reader.querySelector("[data-close-reader]").focus();
 }
 
@@ -855,8 +906,10 @@ function closeReader() {
 function flipWork(direction) {
   if (flip.transitioning) return;
   if (direction > 0 && activeWork < works.length - 1) {
+    ensureFlipPageRendered(activeWork + 1);
     flip.push(flipPages[activeWork + 1]);
   } else if (direction < 0 && activeWork > 0) {
+    ensureFlipPageRendered(activeWork - 1);
     flip.pop();
   }
 }

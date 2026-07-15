@@ -1,0 +1,10 @@
+content/inbox/*-raw-updates.md
+content/inbox/*.private.md
+content/staged/*.md
+content/staged/*.json
+!content/inbox/README.md
+!content/staged/README.md
+.DS_Store
+Thumbs.db
+*.tmp
+content/inbox/
